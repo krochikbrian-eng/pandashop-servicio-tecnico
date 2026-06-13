@@ -221,6 +221,37 @@ img{max-width:100%;display:block}
 @media(max-width:880px){.footer-inner{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.footer-inner{grid-template-columns:1fr}}
 
+/* Especialistas en pantallas */
+.spec-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.spec-media{display:flex;justify-content:center}
+.spec-media img{width:100%;max-width:440px;filter:drop-shadow(0 24px 40px rgba(192,16,22,.14))}
+.spec-text h2{font-size:32px;font-weight:800;letter-spacing:-.5px;margin:14px 0 10px}
+.spec-text>p{color:var(--muted);font-size:16px;margin-bottom:22px;max-width:520px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px}
+.spec-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.spec-item span{font-size:24px}
+.spec-item h3{font-size:16px;margin:6px 0 4px}
+.spec-item p{color:var(--muted);font-size:13.5px}
+@media(max-width:880px){.spec-inner{grid-template-columns:1fr;gap:30px}.spec-media{order:-1}}
+@media(max-width:460px){.spec-grid{grid-template-columns:1fr}}
+
+/* SEO modelos */
+.seo-models{padding:64px 0}
+.seo-models h2{font-size:24px;font-weight:800;text-align:center;letter-spacing:-.3px}
+.seo-intro{text-align:center;color:var(--muted);font-size:15px;max-width:720px;margin:12px auto 32px}
+.seo-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 28px}
+.seo-block h3{font-size:14px;color:var(--red);margin-bottom:5px;font-weight:700}
+.seo-block p{font-size:12.5px;color:#7a818d;line-height:1.55;margin-bottom:14px}
+@media(max-width:860px){.seo-cols{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.seo-cols{grid-template-columns:1fr}}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.reveal-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
 /* WhatsApp float */
-.wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.45);z-index:60;transition:transform .2s}
-.wa-float:hover{transform:scale(1.08)}
+.wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.45);z-index:60;transition:transform .2s;animation:wa-pulse 2.6s infinite}
+.wa-float:hover{transform:scale(1.08);animation:none}
+@keyframes wa-pulse{0%{box-shadow:0 8px 24px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 8px 24px rgba(37,211,102,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 8px 24px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
+@media(prefers-reduced-motion:reduce){.wa-float{animation:none}}

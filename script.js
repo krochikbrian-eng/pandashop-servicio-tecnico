@@ -7,13 +7,13 @@ const servicios = [
     ico: "📱",
     title: "Celulares",
     desc: "Reparación de todas las marcas: Samsung, iPhone, Motorola, Xiaomi y más.",
-    tags: ["Pantalla / módulo", "Batería", "Pin de carga", "Cámara", "Daño por líquido", "Software"],
+    tags: ["Pantalla / módulo", "Batería", "Pin de carga", "Cámara", "Daño por líquido", "Botones"],
   },
   {
     ico: "📲",
     title: "Tablets",
-    desc: "Display, táctil, carga y software para tablets de cualquier marca.",
-    tags: ["Pantalla", "Táctil", "Batería", "Conector de carga", "Software"],
+    desc: "Display, táctil y carga para tablets de cualquier marca.",
+    tags: ["Pantalla", "Táctil", "Batería", "Conector de carga"],
   },
   {
     ico: "🎮",
@@ -36,8 +36,8 @@ const servicios = [
   {
     ico: "💻",
     title: "Notebooks",
-    desc: "Mantenimiento, upgrades y reparación de hardware y software.",
-    tags: ["Pantalla", "Teclado", "Batería", "SSD / RAM", "Limpieza", "Windows"],
+    desc: "Mantenimiento, upgrades y reparación de hardware.",
+    tags: ["Pantalla", "Teclado", "Batería", "SSD / RAM", "Limpieza", "Bisagras"],
   },
   {
     ico: "🤖",
@@ -136,3 +136,30 @@ if (navToggle && nav) {
 // Año footer
 const yEl = document.getElementById("year");
 if (yEl) yEl.textContent = new Date().getFullYear();
+
+// ====== Animación de aparición al hacer scroll ======
+(function () {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const targets = document.querySelectorAll(
+    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head"
+  );
+  if (reduce || !("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("reveal-in"));
+    return;
+  }
+  targets.forEach((el) => el.classList.add("reveal"));
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.style.transitionDelay = Math.min((i % 4) * 70, 210) + "ms";
+          el.classList.add("reveal-in");
+          io.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+  targets.forEach((el) => io.observe(el));
+})();

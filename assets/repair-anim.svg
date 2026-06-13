@@ -1,0 +1,77 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cambio de módulo y pantalla">
+  <defs>
+    <clipPath id="scr"><rect x="178" y="92" width="148" height="232" rx="14"/></clipPath>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft stage -->
+  <ellipse cx="250" cy="345" rx="150" ry="20" fill="#f0d3d5" opacity="0.6"/>
+  <circle cx="250" cy="190" r="168" fill="#fff1f1"/>
+
+  <!-- phone frame + inner board (static) -->
+  <g transform="rotate(-7 250 200)">
+    <rect x="160" y="60" width="180" height="290" rx="30" fill="#111"/>
+    <!-- inner board revealed when module lifts -->
+    <rect x="176" y="78" width="148" height="254" rx="16" fill="#1b3b2f"/>
+    <g fill="#2c5a47">
+      <rect x="190" y="96" width="120" height="40" rx="6"/>
+      <rect x="190" y="150" width="56" height="56" rx="6"/>
+      <rect x="256" y="150" width="54" height="30" rx="6"/>
+      <rect x="190" y="220" width="120" height="90" rx="6"/>
+    </g>
+    <g fill="#d8a23a">
+      <circle cx="206" cy="116" r="5"/><circle cx="296" cy="116" r="5"/>
+      <circle cx="206" cy="300" r="5"/><circle cx="296" cy="300" r="5"/>
+    </g>
+
+    <!-- screen MODULE that lifts off -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 -30; 0 -30; 0 0; 0 0" keyTimes="0;0.28;0.6;0.85;1"
+        dur="4s" repeatCount="indefinite"/>
+      <rect x="170" y="70" width="160" height="270" rx="24" fill="#0c0e12"/>
+      <rect x="180" y="92" width="140" height="226" rx="12" fill="#23262f"/>
+      <!-- content -->
+      <rect x="196" y="112" width="74" height="12" rx="6" fill="#e4141b"/>
+      <rect x="196" y="134" width="104" height="8" rx="4" fill="#5a5f6c"/>
+      <rect x="196" y="150" width="88" height="8" rx="4" fill="#5a5f6c"/>
+      <!-- shine sweep -->
+      <g clip-path="url(#scr)">
+        <rect x="120" y="60" width="60" height="300" fill="url(#shine)" transform="skewX(-18)">
+          <animate attributeName="x" values="120;360;360" keyTimes="0;0.5;1" dur="4s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <!-- flex ribbon at bottom of module -->
+      <path d="M236 330 q0 18 14 22 q14 4 14 18" fill="none" stroke="#d8a23a" stroke-width="6"/>
+      <rect x="230" y="328" width="40" height="10" rx="3" fill="#caa24a"/>
+    </g>
+  </g>
+
+  <!-- floating camera module -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="3s" repeatCount="indefinite"/>
+    <g transform="translate(388 120)">
+      <rect x="-26" y="-26" width="52" height="52" rx="14" fill="#111"/>
+      <circle cx="-8" cy="-6" r="11" fill="#2f3340" stroke="#555" stroke-width="3"/>
+      <circle cx="-8" cy="-6" r="4" fill="#5ad0ff"/>
+      <circle cx="12" cy="14" r="6" fill="#2f3340"/>
+    </g>
+  </g>
+
+  <!-- screwdriver -->
+  <g transform="rotate(38 110 250)">
+    <rect x="101" y="250" width="20" height="104" rx="9" fill="#e4141b"/>
+    <rect x="106" y="220" width="10" height="34" fill="#111"/>
+    <rect x="108" y="196" width="6" height="26" fill="#555"/>
+  </g>
+
+  <!-- loose screws -->
+  <g fill="#9aa1ad">
+    <circle cx="120" cy="120" r="8"/><path d="M115 120h10" stroke="#fff" stroke-width="2.4"/>
+    <circle cx="392" cy="300" r="8"/><path d="M392 295v10" stroke="#fff" stroke-width="2.4"/>
+  </g>
+</svg>
