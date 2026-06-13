@@ -22,6 +22,13 @@ const MIME = {
 
 const server = http.createServer((req, res) => {
   try {
+    // Normalizar barras duplicadas (ej: //contactost_30xST) -> redirección 301 a la URL limpia
+    if (/\/{2,}/.test(req.url)) {
+      const clean = req.url.replace(/\/{2,}/g, "/");
+      res.writeHead(301, { Location: clean });
+      return res.end();
+    }
+
     let urlPath = decodeURIComponent(req.url.split("?")[0]);
     if (urlPath === "/") urlPath = "/index.html";
 
