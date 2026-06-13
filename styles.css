@@ -190,10 +190,12 @@ img{max-width:100%;display:block}
 .form-intro{display:flex;flex-direction:column;align-items:center;text-align:center}
 .form-intro h2{font-size:32px;font-weight:800}
 .form-intro p{color:var(--muted);margin:12px 0 18px;font-size:16px}
-.form-points{list-style:none;display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:24px}
-.form-points li{font-size:15px}
-.form-contact{display:flex;flex-direction:column;align-items:center;gap:10px}
-.form-contact a{color:var(--red);font-weight:600;font-size:15px}
+.form-points{list-style:none;display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:24px}
+.form-points li{font-size:15px;display:flex;align-items:center;gap:10px}
+.form-points li svg{width:19px;height:19px;color:var(--red);flex:none}
+.form-contact{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.form-contact a{color:var(--red);font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px}
+.form-contact a svg{width:19px;height:19px;flex:none}
 .form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 14px 34px rgba(17,17,17,.07)}
 .form label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:var(--text)}
 .form input,.form select,.form textarea{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:15px;font-weight:400}
