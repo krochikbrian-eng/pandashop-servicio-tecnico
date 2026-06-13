@@ -89,6 +89,61 @@ if (cards) {
     .join("");
 }
 
+// ====== Opiniones / reseñas ======
+const reviews = [
+  { n: "Martín G.", m: "iPhone 12 · Pantalla", t: "Cambiaron el módulo en el día y quedó impecable. Súper cumplidores, los recomiendo." },
+  { n: "Carla R.", m: "PS5 · Puerto HDMI", t: "Pensé que mi PlayStation no tenía arreglo y me la dejaron como nueva. Muy buena atención." },
+  { n: "Diego F.", m: "Samsung S21 · Batería", t: "Presupuesto claro antes de tocar nada y garantía por escrito. Todo transparente." },
+  { n: "Lucía M.", m: "Notebook · Limpieza", t: "La notebook andaba lentísima y volvió a volar. Precio justo y rápido." },
+  { n: "Joaquín P.", m: "Joystick · Drift", t: "Me solucionaron el drift del joystick en un rato. Excelente y a buen precio." },
+  { n: "Sofía V.", m: "iPad · Cambio de glass", t: "Cambiaron solo el vidrio y me ahorré un montón. Atención de 10." },
+];
+const revWrap = document.getElementById("reviews");
+if (revWrap) {
+  revWrap.innerHTML = reviews
+    .map(
+      (r) => `
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">“${r.t}”</p>
+      <div class="review-who">
+        <span class="review-av">${r.n.charAt(0)}</span>
+        <div><div class="review-name">${r.n}</div><div class="review-meta">${r.m}</div></div>
+      </div>
+    </div>`
+    )
+    .join("");
+}
+
+// ====== Contadores animados ======
+(function () {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const els = document.querySelectorAll("[data-count]");
+  if (!els.length) return;
+  const fmt = (v, group) => (group ? v.toLocaleString("es-AR") : String(v));
+  const run = (el) => {
+    const target = parseFloat(el.dataset.count);
+    const pre = el.dataset.prefix || "";
+    const suf = el.dataset.suffix || "";
+    const group = el.dataset.group === "1";
+    if (reduce) { el.textContent = pre + fmt(target, group) + suf; return; }
+    const dur = 1400, start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + fmt(Math.round(target * e), group) + suf;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if (!("IntersectionObserver" in window)) { els.forEach(run); return; }
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach((en) => { if (en.isIntersecting) { run(en.target); io.unobserve(en.target); } }),
+    { threshold: 0.4 }
+  );
+  els.forEach((el) => io.observe(el));
+})();
+
 // ====== FAQ ======
 const faqs = [
   { q: "¿Cómo pido un presupuesto?", a: "Escribinos por WhatsApp o completá el formulario con el equipo y la falla. Revisamos y te pasamos un presupuesto cerrado antes de reparar. Solo avanzamos con tu aprobación." },
@@ -153,7 +208,7 @@ if (yEl) yEl.textContent = new Date().getFullYear();
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const targets = document.querySelectorAll(
-    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head"
+    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head, .review"
   );
   if (reduce || !("IntersectionObserver" in window)) {
     targets.forEach((el) => el.classList.add("reveal-in"));
