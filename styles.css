@@ -85,11 +85,12 @@ img{max-width:100%;display:block}
 }
 .hero-inner{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center}
 .pill{display:inline-block;background:rgba(228,20,27,.08);color:var(--red);border:1px solid rgba(228,20,27,.25);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:18px}
+.hero-text{display:flex;flex-direction:column;align-items:center;text-align:center}
 .hero h1{font-size:48px;line-height:1.1;font-weight:800;letter-spacing:-1px}
 .grad{color:var(--red)}
-.hero p{color:var(--muted);font-size:18px;margin:18px 0 26px;max-width:540px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-trust{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.hero p{color:var(--muted);font-size:18px;margin:18px auto 26px;max-width:540px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.hero-trust{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap;justify-content:center}
 .hero-trust div{display:flex;flex-direction:column}
 .hero-trust strong{color:var(--red);font-size:17px}
 .hero-trust span{color:var(--muted);font-size:13px}
