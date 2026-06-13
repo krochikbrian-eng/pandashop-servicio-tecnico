@@ -222,17 +222,18 @@ img{max-width:100%;display:block}
 @media(max-width:520px){.footer-inner{grid-template-columns:1fr}}
 
 /* Especialistas en pantallas */
-.spec-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.spec{padding:56px 0}
+.spec-inner{display:grid;grid-template-columns:0.85fr 1.15fr;gap:36px;align-items:center;background:linear-gradient(135deg,#fff4f4,#fffafa);border:1px solid var(--line);border-radius:24px;padding:36px 40px;box-shadow:0 18px 44px rgba(17,17,17,.06)}
 .spec-media{display:flex;justify-content:center}
-.spec-media img{width:100%;max-width:440px;filter:drop-shadow(0 24px 40px rgba(192,16,22,.14))}
-.spec-text h2{font-size:32px;font-weight:800;letter-spacing:-.5px;margin:14px 0 10px}
-.spec-text>p{color:var(--muted);font-size:16px;margin-bottom:22px;max-width:520px}
-.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px}
-.spec-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.spec-item span{font-size:24px}
-.spec-item h3{font-size:16px;margin:6px 0 4px}
-.spec-item p{color:var(--muted);font-size:13.5px}
-@media(max-width:880px){.spec-inner{grid-template-columns:1fr;gap:30px}.spec-media{order:-1}}
+.spec-media img{width:100%;max-width:330px;filter:drop-shadow(0 18px 32px rgba(192,16,22,.14))}
+.spec-text h2{font-size:28px;font-weight:800;letter-spacing:-.5px;margin:12px 0 8px}
+.spec-text>p{color:var(--muted);font-size:15px;margin-bottom:18px;max-width:520px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.spec-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.spec-item span{font-size:22px}
+.spec-item h3{font-size:15px;margin:5px 0 3px}
+.spec-item p{color:var(--muted);font-size:13px}
+@media(max-width:880px){.spec{padding:40px 0}.spec-inner{grid-template-columns:1fr;gap:24px;padding:26px 22px}.spec-media{order:-1}.spec-media img{max-width:260px}}
 @media(max-width:460px){.spec-grid{grid-template-columns:1fr}}
 
 /* SEO modelos */
