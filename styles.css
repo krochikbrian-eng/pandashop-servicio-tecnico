@@ -171,6 +171,7 @@ img{max-width:100%;display:block}
 .section-head h2{font-size:34px;font-weight:800;letter-spacing:-.5px}
 .section-head h2::after{content:"";display:block;width:54px;height:4px;background:var(--red);border-radius:2px;margin:14px auto 0}
 .section-head p{color:var(--muted);margin-top:14px;font-size:17px}
+@media(max-width:600px){.section-head h2{font-size:25px}.section-head p{font-size:15.5px}}
 
 /* Cards servicios */
 .cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
