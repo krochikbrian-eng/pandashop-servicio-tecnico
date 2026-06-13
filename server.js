@@ -23,6 +23,14 @@ const MIME = {
 const server = http.createServer((req, res) => {
   try {
     let urlPath = decodeURIComponent(req.url.split("?")[0]);
+
+    // Redirecciones a la sección de Servicios
+    const redirects = ["/servicio-tecnico", "/servicio-tecnico/", "/st-gral", "/st-gral/"];
+    if (redirects.includes(urlPath.toLowerCase())) {
+      res.writeHead(302, { Location: "/#servicios" });
+      return res.end();
+    }
+
     if (urlPath === "/") urlPath = "/index.html";
 
     // Evitar path traversal
