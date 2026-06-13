@@ -115,6 +115,29 @@ if (revWrap) {
     .join("");
 }
 
+// ====== Tips de cuidado ======
+const tips = [
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 5.5h6"/><path d="m9.5 13 1.7 1.7L15 11"/></svg>', t: "Usá funda y vidrio templado", d: "Una buena funda y un templado absorben los golpes y evitan el cambio de módulo, que es la reparación más cara." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="16" height="10" rx="2.5"/><path d="M21.5 10.5v3"/><path d="M6 12h6"/></svg>', t: "Cuidá la batería", d: "Mantené la carga entre 20% y 80% y evitá dejarlo al 100% enchufado toda la noche. Así dura más ciclos." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>', t: "Evitá el calor y el sol directo", d: "El calor degrada la batería y la pantalla. No lo dejes en el auto al sol ni cargando sobre la cama o el sillón." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 7h5l-3 13 2-9h-5l3-11Z"/></svg>', t: "Usá cargadores certificados", d: "Los cargadores y cables truchos dañan el pin de carga y la batería. Invertí en uno original o certificado." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c4 4.5 6.5 7.5 6.5 11a6.5 6.5 0 0 1-13 0c0-3.5 2.5-6.5 6.5-11Z"/></svg>', t: "Cuidalo del agua", d: "Si se moja, apagalo, no lo cargues y no lo prendas. Traelo cuanto antes: actuar rápido salva la placa." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>', t: "Limpiá el pin de carga", d: "La pelusa del bolsillo se acumula en el conector y hace que cargue mal. Limpialo con cuidado y un pincel seco." },
+];
+const tipsWrap = document.getElementById("tips-list");
+if (tipsWrap) {
+  tipsWrap.innerHTML = tips
+    .map(
+      (t) => `
+    <div class="tip">
+      <div class="tip-ico">${t.ico}</div>
+      <h3>${t.t}</h3>
+      <p>${t.d}</p>
+    </div>`
+    )
+    .join("");
+}
+
 // ====== Contadores animados ======
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -251,7 +274,7 @@ if (yEl) yEl.textContent = new Date().getFullYear();
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const targets = document.querySelectorAll(
-    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head, .review"
+    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head, .review, .tip"
   );
   if (reduce || !("IntersectionObserver" in window)) {
     targets.forEach((el) => el.classList.add("reveal-in"));
