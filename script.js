@@ -308,18 +308,21 @@ if (yEl) yEl.textContent = new Date().getFullYear();
     return;
   }
   targets.forEach((el) => el.classList.add("reveal"));
+  const reveal = (el, i) => {
+    el.style.transitionDelay = Math.min((i % 4) * 70, 210) + "ms";
+    el.classList.add("reveal-in");
+  };
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          el.style.transitionDelay = Math.min((i % 4) * 70, 210) + "ms";
-          el.classList.add("reveal-in");
-          io.unobserve(el);
-        }
+        if (entry.isIntersecting) { reveal(entry.target, i); io.unobserve(entry.target); }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px -8% 0px" }
   );
   targets.forEach((el) => io.observe(el));
+  // Red de seguridad: si algo no se reveló (observer no disparó), mostrarlo igual
+  setTimeout(() => {
+    targets.forEach((el, i) => { if (!el.classList.contains("reveal-in")) reveal(el, i); });
+  }, 2500);
 })();

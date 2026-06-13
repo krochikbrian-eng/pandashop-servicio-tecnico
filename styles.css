@@ -326,7 +326,7 @@ img{max-width:100%;display:block}
 .spec-item span.ic svg{width:23px;height:23px}
 .spec-item h3{font-size:15px;margin:9px 0 3px}
 .spec-item p{color:var(--muted);font-size:13px}
-@media(max-width:880px){.spec{padding:40px 0}.spec-inner{grid-template-columns:1fr;gap:24px;padding:26px 22px}.spec-media{order:-1}.spec-media img{max-width:260px}}
+@media(max-width:880px){.spec{padding:40px 0}.spec-inner{grid-template-columns:1fr;gap:24px;padding:26px 22px}.spec-media{order:-1}.spec-media img{max-width:260px}.spec-text{text-align:center}.spec-text>p{margin-left:auto;margin-right:auto}}
 @media(max-width:460px){.spec-grid{grid-template-columns:1fr}}
 
 /* SEO modelos */
