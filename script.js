@@ -204,6 +204,49 @@ if (navToggle && nav) {
 const yEl = document.getElementById("year");
 if (yEl) yEl.textContent = new Date().getFullYear();
 
+// ====== Barra de progreso de scroll ======
+(function () {
+  const bar = document.getElementById("scrollProg");
+  if (!bar) return;
+  let ticking = false;
+  const update = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
+})();
+
+// ====== Scroll-spy: resalta la sección activa en el menú ======
+(function () {
+  const links = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+  if (!links.length || !("IntersectionObserver" in window)) return;
+  const map = new Map();
+  links.forEach((a) => {
+    const id = a.getAttribute("href").slice(1);
+    const sec = document.getElementById(id);
+    if (sec) map.set(sec, a);
+  });
+  if (!map.size) return;
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          links.forEach((l) => l.classList.remove("active"));
+          const a = map.get(en.target);
+          if (a) a.classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+  );
+  map.forEach((_, sec) => io.observe(sec));
+})();
+
 // ====== Animación de aparición al hacer scroll ======
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
