@@ -1,0 +1,25 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pandashop">
+  <!-- ears -->
+  <circle cx="30" cy="38" r="15" fill="#111"/>
+  <circle cx="78" cy="38" r="15" fill="#111"/>
+  <!-- camera / head body -->
+  <rect x="14" y="36" width="84" height="58" rx="18" fill="#111"/>
+  <!-- viewfinder bump -->
+  <rect x="50" y="28" width="22" height="14" rx="5" fill="#111"/>
+  <!-- white panda face -->
+  <rect x="22" y="46" width="46" height="40" rx="16" fill="#fff"/>
+  <!-- left eye patch -->
+  <ellipse cx="36" cy="64" rx="9" ry="11" fill="#111" transform="rotate(-18 36 64)"/>
+  <!-- right eye patch -->
+  <ellipse cx="56" cy="64" rx="9" ry="11" fill="#111" transform="rotate(18 56 64)"/>
+  <!-- eyes -->
+  <circle cx="36" cy="64" r="4.5" fill="#fff"/>
+  <circle cx="56" cy="64" r="4.5" fill="#fff"/>
+  <circle cx="37" cy="65" r="2.2" fill="#111"/>
+  <circle cx="57" cy="65" r="2.2" fill="#111"/>
+  <!-- lens on the black (right) side -->
+  <circle cx="82" cy="66" r="9" fill="#fff"/>
+  <circle cx="82" cy="66" r="4.5" fill="#111"/>
+  <!-- cable curl -->
+  <path d="M98 70 q14 2 12 14 q-2 10 -12 9" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+</svg>
