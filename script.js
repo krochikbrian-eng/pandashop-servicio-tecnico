@@ -167,6 +167,31 @@ if (tipsWrap) {
   els.forEach((el) => io.observe(el));
 })();
 
+// ====== Fallas que reparamos ======
+const fixes = [
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M10 18.5h4"/><path d="m8.5 8 7 5M15.5 8l-7 5"/></svg>', t: "Cambio de pantalla", d: "Si se astilló, no da imagen, se ve distorsionada o falla el táctil." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="16" height="10" rx="2.5"/><path d="M21.5 10.5v3"/><path d="m9 9-2 3.2h3L8 15.5"/></svg>', t: "Cambio de batería", d: "Si no enciende, no carga bien, dura poco o se recalienta." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6"/><path d="M7 8h10v3a5 5 0 0 1-10 0Z"/><path d="M12 16v5"/></svg>', t: "Pin de carga", d: "Si carga solo en cierta posición, intermitente o directamente no carga." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg>', t: "Jack de audio", d: "Si al conectar los auriculares no suena o se escucha de un solo lado." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/></svg>', t: "Botón / Home", d: "Si el botón no responde, está trabado o no detecta la huella digital." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg>', t: "Micrófono / parlante", d: "Si no te escuchan en las llamadas o fallan los audios y notas de voz." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2.5"/><circle cx="12" cy="13.5" r="3.4"/><path d="M8 7l1.4-2.5h5.2L16 7"/></svg>', t: "Cambio de cámara", d: "Si se mojó, se rompió el lente, la tapa trasera o sale borrosa." },
+  { ico: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><path d="M9.5 2.5v4M14.5 2.5v4M9.5 17.5v4M14.5 17.5v4M2.5 9.5h4M2.5 14.5h4M17.5 9.5h4M17.5 14.5h4"/></svg>', t: "Placa / no enciende", d: "Si el equipo no da señales de vida y queda completamente apagado." },
+];
+const fixWrap = document.getElementById("fixes");
+if (fixWrap) {
+  fixWrap.innerHTML = fixes
+    .map(
+      (f) => `
+    <div class="fix">
+      <div class="fix-ico">${f.ico}</div>
+      <h3>${f.t}</h3>
+      <p>${f.d}</p>
+    </div>`
+    )
+    .join("");
+}
+
 // ====== FAQ ======
 const faqs = [
   { q: "¿Cómo pido un presupuesto?", a: "Escribinos por WhatsApp o completá el formulario con el equipo y la falla. Revisamos y te pasamos un presupuesto cerrado antes de reparar. Solo avanzamos con tu aprobación." },
@@ -301,7 +326,7 @@ if (yEl) yEl.textContent = new Date().getFullYear();
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const targets = document.querySelectorAll(
-    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head, .review, .tip"
+    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head, .review, .tip, .fix, .ff"
   );
   if (reduce || !("IntersectionObserver" in window)) {
     targets.forEach((el) => el.classList.add("reveal-in"));
