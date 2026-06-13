@@ -128,18 +128,23 @@ img{max-width:100%;display:block}
 .section-head p{color:var(--muted);margin-top:14px;font-size:17px}
 
 /* Cards servicios */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.card{flex:1 1 320px;max-width:362px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-4px);border-color:rgba(228,20,27,.4);box-shadow:0 14px 30px rgba(17,17,17,.08)}
-.card-ico{font-size:34px;margin-bottom:12px}
+.card-ico{width:54px;height:54px;border-radius:14px;background:rgba(228,20,27,.08);color:var(--red);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card-ico svg{width:28px;height:28px}
 .card h3{font-size:20px;margin-bottom:8px}
 .card p{color:var(--muted);font-size:14px;margin-bottom:14px}
 .card ul{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
 .card li{font-size:12px;background:var(--bg-soft);border:1px solid var(--line);padding:5px 10px;border-radius:999px;color:var(--muted)}
 .card .card-link{margin-top:auto;color:var(--red);font-weight:700;font-size:14px}
 .card .card-link:hover{text-decoration:underline}
-@media(max-width:880px){.cards{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.cards{grid-template-columns:1fr}}
+@media(max-width:880px){.card{flex:1 1 280px}}
+@media(max-width:560px){.card{flex:1 1 100%;max-width:none}}
+
+/* Cajas de íconos genéricas */
+.ic{display:inline-flex;align-items:center;justify-content:center;color:var(--red)}
+.ic svg{display:block}
 
 /* Categorías */
 .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -171,8 +176,9 @@ img{max-width:100%;display:block}
 /* Why */
 .why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .why-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-.why-item span{font-size:30px}
-.why-item h3{font-size:18px;margin:10px 0 6px}
+.why-item .ic{width:52px;height:52px;border-radius:13px;background:rgba(228,20,27,.08)}
+.why-item .ic svg{width:27px;height:27px}
+.why-item h3{font-size:18px;margin:14px 0 6px}
 .why-item p{color:var(--muted);font-size:14px}
 @media(max-width:880px){.why{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.why{grid-template-columns:1fr}}
@@ -230,8 +236,9 @@ img{max-width:100%;display:block}
 .spec-text>p{color:var(--muted);font-size:15px;margin-bottom:18px;max-width:520px}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
 .spec-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.spec-item span{font-size:22px}
-.spec-item h3{font-size:15px;margin:5px 0 3px}
+.spec-item span.ic{width:42px;height:42px;border-radius:11px;background:rgba(228,20,27,.08)}
+.spec-item span.ic svg{width:23px;height:23px}
+.spec-item h3{font-size:15px;margin:9px 0 3px}
 .spec-item p{color:var(--muted);font-size:13px}
 @media(max-width:880px){.spec{padding:40px 0}.spec-inner{grid-template-columns:1fr;gap:24px;padding:26px 22px}.spec-media{order:-1}.spec-media img{max-width:260px}}
 @media(max-width:460px){.spec-grid{grid-template-columns:1fr}}

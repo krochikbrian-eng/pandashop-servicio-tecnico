@@ -1,52 +1,64 @@
 // ====== Config ======
 const WHATSAPP = "5491133805700";
 
+// ====== Íconos (SVG inline, trazo limpio) ======
+const SVG = {
+  celular: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>',
+  tablet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="2.5" width="15" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg>',
+  consola: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8.5h8a4.5 4.5 0 0 1 4.4 5.4l-.5 2.3A2.6 2.6 0 0 1 15.6 17L14 15.5h-4L8.4 17a2.6 2.6 0 0 1-4.3-.8l-.5-2.3A4.5 4.5 0 0 1 8 8.5Z"/><path d="M7.5 11.5v2M6.5 12.5h2"/><circle cx="16" cy="11.8" r=".6" fill="currentColor" stroke="none"/><circle cx="17.3" cy="13.2" r=".6" fill="currentColor" stroke="none"/></svg>',
+  joystick: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14V7"/><circle cx="12" cy="5.2" r="2.3"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0Z"/></svg>',
+  drone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="9.5" width="5" height="5" rx="1.3"/><circle cx="5" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><path d="M6.7 6.7 9.6 9.6M17.3 6.7 14.4 9.6M6.7 17.3 9.6 14.4M17.3 17.3 14.4 14.4"/></svg>',
+  notebook: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="1.6"/><path d="M2.5 19.5h19"/></svg>',
+  robot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.7 10.5h16.6"/><circle cx="9" cy="14.5" r="1.1"/><circle cx="15" cy="14.5" r="1.1"/></svg>',
+  repuesto: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.5a3.8 3.8 0 0 0-5 4.8l-6 6 2.5 2.5 6-6a3.8 3.8 0 0 0 4.8-5l-2.4 2.4-1.9-.5-.5-1.9 2.5-2.4Z"/></svg>',
+};
+
 // ====== Servicios ======
 const servicios = [
   {
-    ico: "📱",
+    ico: SVG.celular,
     title: "Celulares",
     desc: "Reparación de todas las marcas: Samsung, iPhone, Motorola, Xiaomi y más.",
     tags: ["Pantalla / módulo", "Batería", "Pin de carga", "Cámara", "Daño por líquido", "Botones"],
   },
   {
-    ico: "📲",
+    ico: SVG.tablet,
     title: "Tablets",
     desc: "Display, táctil y carga para tablets de cualquier marca.",
     tags: ["Pantalla", "Táctil", "Batería", "Conector de carga"],
   },
   {
-    ico: "🎮",
+    ico: SVG.consola,
     title: "Consolas",
     desc: "PlayStation, Xbox y Nintendo Switch: limpieza, HDMI, lectoras y más.",
     tags: ["Puerto HDMI", "Lectora", "Ventilación / pasta", "Fuente", "No enciende"],
   },
   {
-    ico: "🕹️",
+    ico: SVG.joystick,
     title: "Controles / Joysticks",
     desc: "Solucionamos el drift de sticks, botones y gatillos.",
     tags: ["Drift de sticks", "Botones", "Gatillos L/R", "Batería", "Conector"],
   },
   {
-    ico: "🚁",
+    ico: SVG.drone,
     title: "Drones",
     desc: "Diagnóstico, reparación y calibración de drones y sus controles.",
     tags: ["Motores", "Hélices / brazos", "Cámara / gimbal", "Calibración", "Placa"],
   },
   {
-    ico: "💻",
+    ico: SVG.notebook,
     title: "Notebooks",
     desc: "Mantenimiento, upgrades y reparación de hardware.",
     tags: ["Pantalla", "Teclado", "Batería", "SSD / RAM", "Limpieza", "Bisagras"],
   },
   {
-    ico: "🤖",
+    ico: SVG.robot,
     title: "Aspiradoras robot",
     desc: "Servicio para Roborock, Ecovacs, iLife y otras marcas.",
     tags: ["Batería", "Sensores", "Motores", "Cepillos", "No carga"],
   },
   {
-    ico: "🔧",
+    ico: SVG.repuesto,
     title: "Venta de repuestos",
     desc: "Pantallas, baterías, módulos y accesorios para que repares o repongas.",
     tags: ["Pantallas", "Baterías", "Pines de carga", "Accesorios"],
