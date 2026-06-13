@@ -23,21 +23,18 @@ const MIME = {
 const server = http.createServer((req, res) => {
   try {
     let urlPath = decodeURIComponent(req.url.split("?")[0]);
-
-    // Redirecciones a la sección de Servicios
-    const redirects = ["/servicio-tecnico", "/servicio-tecnico/", "/st-gral", "/st-gral/"];
-    if (redirects.includes(urlPath.toLowerCase())) {
-      res.writeHead(302, { Location: "/#servicios" });
-      return res.end();
-    }
-
     if (urlPath === "/") urlPath = "/index.html";
 
     // Evitar path traversal
-    const filePath = path.normalize(path.join(ROOT, urlPath));
+    let filePath = path.normalize(path.join(ROOT, urlPath));
     if (!filePath.startsWith(ROOT)) {
       res.writeHead(403);
       return res.end("Forbidden");
+    }
+
+    // Rutas "limpias" sin extensión (ej: /servicio-tecnico) -> carpeta/index.html
+    if (!path.extname(filePath)) {
+      filePath = path.join(filePath, "index.html");
     }
 
     fs.readFile(filePath, (err, data) => {
