@@ -79,6 +79,10 @@ img{max-width:100%;display:block}
 
 /* Hero */
 .hero{padding:72px 0 64px;background:#fff url("/assets/hero-bg.svg") center right / cover no-repeat;border-bottom:1px solid var(--line)}
+@media(max-width:880px){
+  /* En mobile la escena queda detrás del texto: uso fondo limpio y muestro la ilustración arriba del card */
+  .hero{background:linear-gradient(180deg,#fff4f4,#ffffff)}
+}
 .hero-inner{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center}
 .pill{display:inline-block;background:rgba(228,20,27,.08);color:var(--red);border:1px solid rgba(228,20,27,.25);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:18px}
 .hero h1{font-size:48px;line-height:1.1;font-weight:800;letter-spacing:-1px}
