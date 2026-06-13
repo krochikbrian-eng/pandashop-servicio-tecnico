@@ -227,6 +227,33 @@ if (navToggle && nav) {
 const yEl = document.getElementById("year");
 if (yEl) yEl.textContent = new Date().getFullYear();
 
+// ====== Estado abierto / cerrado del local (hora de Buenos Aires) ======
+(function () {
+  const el = document.getElementById("openStatus");
+  if (!el) return;
+  // Lun–Vie 10:00–19:00 · Sáb 10:30–13:30 (minutos desde medianoche)
+  const sched = { 1: [600, 1140], 2: [600, 1140], 3: [600, 1140], 4: [600, 1140], 5: [600, 1140], 6: [630, 810] };
+  const days = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  const nowBA = () => {
+    const f = new Intl.DateTimeFormat("en-US", { timeZone: "America/Argentina/Buenos_Aires", hour12: false, weekday: "short", hour: "2-digit", minute: "2-digit" });
+    const p = Object.fromEntries(f.formatToParts(new Date()).map((x) => [x.type, x.value]));
+    return { d: days[p.weekday], m: parseInt(p.hour, 10) * 60 + parseInt(p.minute, 10) };
+  };
+  const render = () => {
+    const { d, m } = nowBA();
+    const r = sched[d];
+    if (r && m >= r[0] && m < r[1]) {
+      el.className = "tb-status open";
+      el.textContent = "Abierto ahora";
+    } else {
+      el.className = "tb-status closed";
+      el.textContent = "Cerrado ahora";
+    }
+  };
+  render();
+  setInterval(render, 60000);
+})();
+
 // ====== Barra de progreso de scroll ======
 (function () {
   const bar = document.getElementById("scrollProg");
