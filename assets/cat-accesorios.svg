@@ -1,0 +1,20 @@
+<svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Accesorios">
+  <defs><clipPath id="ac"><rect width="420" height="280" rx="20"/></clipPath></defs>
+  <g clip-path="url(#ac)">
+    <rect width="420" height="280" fill="#fff5f5"/>
+    <circle cx="340" cy="210" r="100" fill="#fde2e3"/>
+    <!-- charger plug -->
+    <rect x="60" y="70" width="80" height="60" rx="14" fill="#111"/>
+    <rect x="92" y="50" width="8" height="24" fill="#777"/>
+    <rect x="108" y="50" width="8" height="24" fill="#777"/>
+    <!-- cable -->
+    <path d="M140 110 C 210 110 200 200 280 200" fill="none" stroke="#e4141b" stroke-width="10" stroke-linecap="round"/>
+    <rect x="280" y="188" width="34" height="24" rx="5" fill="#111"/>
+    <!-- earbuds case -->
+    <rect x="250" y="70" width="64" height="46" rx="14" fill="#fff" stroke="#d9dde4" stroke-width="3"/>
+    <circle cx="270" cy="93" r="7" fill="#111"/>
+    <circle cx="294" cy="93" r="7" fill="#111"/>
+    <rect x="0" y="232" width="420" height="48" fill="#111"/>
+    <text x="24" y="263" fill="#fff" font-family="Plus Jakarta Sans,Arial" font-weight="800" font-size="20">Accesorios</text>
+  </g>
+</svg>

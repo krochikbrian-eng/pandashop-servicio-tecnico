@@ -1,0 +1,22 @@
+<svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Consolas y controles">
+  <defs><clipPath id="co"><rect width="420" height="280" rx="20"/></clipPath></defs>
+  <g clip-path="url(#co)">
+    <rect width="420" height="280" fill="#fff5f5"/>
+    <circle cx="90" cy="70" r="90" fill="#fde2e3"/>
+    <!-- controller body -->
+    <path d="M150 120c18-16 102-16 120 0 14 12 34 70 18 86-14 14-34-6-46-16-14-12-50-12-64 0-12 10-32 30-46 16-16-16 4-74 18-86z" fill="#111"/>
+    <!-- d-pad -->
+    <rect x="168" y="150" width="10" height="34" rx="2" fill="#5a5f6c"/>
+    <rect x="156" y="162" width="34" height="10" rx="2" fill="#5a5f6c"/>
+    <!-- buttons -->
+    <circle cx="262" cy="150" r="8" fill="#e4141b"/>
+    <circle cx="284" cy="167" r="8" fill="#f4c01f"/>
+    <circle cx="262" cy="184" r="8" fill="#23c483"/>
+    <circle cx="240" cy="167" r="8" fill="#5ad0ff"/>
+    <!-- sticks -->
+    <circle cx="205" cy="185" r="13" fill="#2f3340"/>
+    <circle cx="250" cy="200" r="13" fill="#2f3340"/>
+    <rect x="0" y="232" width="420" height="48" fill="#111"/>
+    <text x="24" y="263" fill="#fff" font-family="Plus Jakarta Sans,Arial" font-weight="800" font-size="20">Consolas y controles</text>
+  </g>
+</svg>

@@ -60,16 +60,22 @@
 <header class="header" id="top">
   <div class="container header-inner">
     <a class="brand" href="#top">
-      <img class="brand-mark" src="/assets/logo-mark.svg" alt="Pandashop" />
-      <span class="brand-word">PANDA<span class="red">SHOP</span></span>
+      <img class="brand-logo" src="/assets/pandashop-logo.png" alt="Pandashop" />
       <span class="brand-tag">Servicio Técnico</span>
     </a>
+
+    <form class="search" action="https://pandashop.ar/search/" method="get" target="_blank" rel="noopener">
+      <svg class="search-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M21 21l-4.3-4.3M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      <input type="search" name="q" placeholder="Buscar productos en la tienda…" aria-label="Buscar productos" required />
+      <button type="submit">Buscar</button>
+    </form>
+
     <nav class="nav" id="nav">
+      <a href="https://www.pandashop.ar" target="_blank" rel="noopener">Productos</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Cómo trabajamos</a>
       <a href="#por-que">Por qué nosotros</a>
       <a href="#faq">Preguntas</a>
-      <a href="https://www.pandashop.ar" target="_blank" rel="noopener">Tienda</a>
       <a class="nav-cta" href="#presupuesto">Pedir presupuesto</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
@@ -80,7 +86,7 @@
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-text">
-      <span class="pill">🐼 Más de 10.000 equipos reparados</span>
+      <span class="pill">⭐ 4,9/5 · Más de 10.000 equipos reparados</span>
       <h1>Servicio técnico que <span class="grad">deja tus equipos como nuevos</span></h1>
       <p>Reparamos celulares, tablets, consolas, controles, drones, notebooks y aspiradoras robot. Repuestos de calidad y garantía escrita en cada reparación.</p>
       <div class="hero-cta">
@@ -108,6 +114,28 @@
   </div>
 </section>
 
+<!-- Marcas -->
+<section class="brands">
+  <div class="container">
+    <p class="brands-title">Reparamos todas las marcas</p>
+    <div class="brands-row">
+      <span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Motorola</span>
+      <span>Huawei</span><span>PlayStation</span><span>Xbox</span><span>Nintendo</span>
+      <span>DJI</span><span>Lenovo</span><span>HP</span><span>Acer</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container stats-inner">
+    <div class="stat"><strong>+10.000</strong><span>equipos reparados</span></div>
+    <div class="stat"><strong>+8 años</strong><span>de experiencia</span></div>
+    <div class="stat"><strong>24-72 hs</strong><span>tiempo promedio</span></div>
+    <div class="stat"><strong>Garantía</strong><span>escrita siempre</span></div>
+  </div>
+</section>
+
 <!-- Servicios -->
 <section class="section" id="servicios">
   <div class="container">
@@ -119,8 +147,51 @@
   </div>
 </section>
 
+<!-- Categorías / Productos -->
+<section class="section section-alt" id="categorias">
+  <div class="container">
+    <div class="section-head">
+      <h2>Productos y servicios</h2>
+      <p>Reparamos tus equipos y además conseguís repuestos y accesorios en nuestra tienda.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="#servicios">
+        <img src="/assets/cat-reparacion.svg" alt="Servicio técnico" loading="lazy" />
+        <div class="cat-body"><h3>Servicio técnico</h3><p>Celulares, tablets, drones y más.</p></div>
+      </a>
+      <a class="cat-card" href="#servicios">
+        <img src="/assets/cat-consolas.svg" alt="Reparación de consolas y controles" loading="lazy" />
+        <div class="cat-body"><h3>Reparamos consolas</h3><p>Consolas, joysticks y drift de sticks.</p></div>
+      </a>
+      <a class="cat-card" href="https://www.pandashop.ar/celulares-y-telefonos/repuestos-de-celulares/" target="_blank" rel="noopener">
+        <img src="/assets/cat-repuestos.svg" alt="Repuestos de celulares y tablets" loading="lazy" />
+        <div class="cat-body"><h3>Repuestos</h3><p>Pantallas, baterías y módulos.</p><span class="cat-link">Ver en la tienda →</span></div>
+      </a>
+      <a class="cat-card" href="https://pandashop.ar/search/?q=accesorios" target="_blank" rel="noopener">
+        <img src="/assets/cat-accesorios.svg" alt="Accesorios de celulares, tablets y notebooks" loading="lazy" />
+        <div class="cat-body"><h3>Accesorios</h3><p>Celulares, tablets y notebooks.</p><span class="cat-link">Ver en la tienda →</span></div>
+      </a>
+      <a class="cat-card" href="https://www.pandashop.ar/electrodomesticos-y-aires-ac/pequenos-electrodomesticos/para-hogar/aspiradoras-robot/" target="_blank" rel="noopener">
+        <img src="/assets/cat-aspiradoras.svg" alt="Aspiradoras robot" loading="lazy" />
+        <div class="cat-body"><h3>Aspiradoras robot</h3><p>Venta y servicio técnico.</p><span class="cat-link">Ver en la tienda →</span></div>
+      </a>
+      <a class="cat-card" href="https://www.pandashop.ar/computacion/" target="_blank" rel="noopener">
+        <img src="/assets/cat-notebooks.svg" alt="Notebooks" loading="lazy" />
+        <div class="cat-body"><h3>Notebooks</h3><p>Venta, upgrades y reparación.</p><span class="cat-link">Ver en la tienda →</span></div>
+      </a>
+      <a class="cat-card" href="https://pandashop.ar/search/?q=auriculares" target="_blank" rel="noopener">
+        <img src="/assets/cat-audio.svg" alt="Auriculares y parlantes" loading="lazy" />
+        <div class="cat-body"><h3>Audio</h3><p>Auriculares y parlantes.</p><span class="cat-link">Ver en la tienda →</span></div>
+      </a>
+      <a class="cat-card cat-card-cta" href="https://www.pandashop.ar" target="_blank" rel="noopener">
+        <div class="cat-cta-inner"><h3>Ver toda la tienda</h3><p>Miles de productos en pandashop.ar</p><span class="cat-link">Ir a la tienda →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Proceso -->
-<section class="section section-alt" id="proceso">
+<section class="section" id="proceso">
   <div class="container">
     <div class="section-head">
       <h2>Cómo trabajamos</h2>
@@ -136,7 +207,7 @@
 </section>
 
 <!-- Por qué -->
-<section class="section" id="por-que">
+<section class="section section-alt" id="por-que">
   <div class="container">
     <div class="section-head">
       <h2>Por qué elegir Pandashop</h2>
@@ -154,7 +225,7 @@
 </section>
 
 <!-- Presupuesto -->
-<section class="section section-alt" id="presupuesto">
+<section class="section" id="presupuesto">
   <div class="container form-wrap">
     <div class="form-intro">
       <h2>Pedí tu presupuesto</h2>
@@ -205,7 +276,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="section" id="faq">
+<section class="section section-alt" id="faq">
   <div class="container">
     <div class="section-head">
       <h2>Preguntas frecuentes</h2>
@@ -227,8 +298,8 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div>
-      <span class="footer-brand"><img class="footer-logo" src="/assets/logo-mark.svg" alt="Pandashop" /> <b>PANDA<span class="red">SHOP</span></b></span>
-      <p>Servicio técnico y venta de productos, accesorios y repuestos.</p>
+      <img class="footer-logo" src="/assets/pandashop-logo.png" alt="Pandashop" />
+      <p>Servicio técnico y venta de productos, accesorios y repuestos. El mismo respaldo de Pandashop.</p>
     </div>
     <div>
       <h4>Servicio</h4>
