@@ -72,8 +72,4 @@
     <circle cx="10" cy="-11" r="2" fill="#e4141b"/>
   </g>
 
-  <!-- chips +/- -->
-  <g class="rcam" transform="translate(70 92)"><circle r="11" fill="url(#rbadge)" filter="url(#rso)"/><rect x="-5" y="-1.4" width="10" height="2.8" rx="1.4" fill="#7c828c"/></g>
-  <circle cx="230" cy="178" r="11" fill="url(#rbadge)" filter="url(#rso)"/>
-  <path d="M230 173v.2 M230 177v6" stroke="#7c828c" stroke-width="2.6" stroke-linecap="round"/>
 </svg>
