@@ -159,7 +159,7 @@ img{max-width:100%;display:block}
 .tb{display:flex;align-items:center;gap:11px;font-size:14.5px;color:var(--muted);flex:1 1 200px;justify-content:center}
 .tb b{color:var(--text);font-weight:700}
 .tb svg{width:26px;height:26px;color:var(--red);flex:none}
-@media(max-width:720px){.trust-strip-inner{gap:16px 14px}.tb{flex:1 1 44%;justify-content:center;font-size:13.5px}}
+@media(max-width:720px){.trust-strip-inner{gap:16px 14px}.tb{flex:1 1 44%;justify-content:flex-start;align-items:center;font-size:13.5px;padding-left:6px}}
 
 /* Brands strip */
 .brands{padding:30px 0;border-bottom:1px solid var(--line);background:#fff}
