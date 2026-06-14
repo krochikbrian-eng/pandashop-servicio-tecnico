@@ -63,13 +63,4 @@
     </g>
   </g>
 
-  <!-- badge cámara -->
-  <g class="rcam" transform="translate(226 92)">
-    <rect x="-22" y="-22" width="44" height="44" rx="13" fill="url(#rbadge)" filter="url(#rso)"/>
-    <circle cx="0" cy="0" r="11" fill="url(#rlens)"/>
-    <circle cx="0" cy="0" r="5" fill="#0a2a44"/>
-    <circle cx="-3" cy="-3" r="2" fill="#7fc7ff" opacity="0.8"/>
-    <circle cx="10" cy="-11" r="2" fill="#e4141b"/>
-  </g>
-
 </svg>

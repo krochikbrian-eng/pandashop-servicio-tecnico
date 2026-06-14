@@ -332,7 +332,7 @@ img{max-width:100%;display:block}
 .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(228,20,27,.12)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-note{text-align:center;color:var(--muted);font-size:12px;font-weight:400}
-@media(max-width:880px){.form-wrap{grid-template-columns:1fr;gap:30px}.form-row{grid-template-columns:1fr}.quote-art{display:none}}
+@media(max-width:880px){.form-wrap{grid-template-columns:1fr;gap:30px}.form-row{grid-template-columns:1fr}.quote-art{display:flex;order:-1;justify-content:center;margin:0 auto 18px}.quote-art img{width:min(62%,210px)}}
 
 /* FAQ */
 .faq{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
