@@ -51,8 +51,11 @@
   <!-- controller (top center-right) -->
   <g transform="translate(1330 150)">
     <circle r="52" fill="#fff" filter="url(#soft)"/>
-    <path d="M-28 -4c5-8 23-8 28 0 4 6 10 26 4 31-6 5-12-3-18-8-4-3-13-3-17 0-6 5-12 13-18 8-6-5 0-25 4-31z" fill="#111" transform="translate(13 6) scale(0.85)"/>
-    <circle cx="5" cy="20" r="3.6" fill="#e4141b"/><circle cx="18" cy="27" r="3.6" fill="#23c483"/>
+    <g transform="translate(0 1)">
+      <path d="M-32 -3C-34 4 -33 15 -26 15 -20 15 -16 8 -10 6 -6 4.5 -4 4 0 4 4 4 6 4.5 10 6 16 8 20 15 26 15 33 15 34 4 32 -3 30 -9 22 -10 14 -9 8 -8 4 -7 0 -7 -4 -7 -8 -8 -14 -9 -22 -10 -30 -9 -32 -3Z" fill="#111"/>
+      <path d="M-21 2h12 M-15 -4v12" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+      <circle cx="12" cy="3" r="3.2" fill="#e4141b"/><circle cx="19" cy="-3" r="3.2" fill="#23c483"/>
+    </g>
   </g>
   <!-- drone (right upper) -->
   <g transform="translate(1520 360)">
