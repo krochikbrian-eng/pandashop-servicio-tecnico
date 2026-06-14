@@ -104,12 +104,12 @@ if (revWrap) {
     .map(
       (r) => `
     <div class="review">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">“${r.t}”</p>
-      <div class="review-who">
+      <div class="review-head">
         <span class="review-av">${r.n.charAt(0)}</span>
-        <div><div class="review-name">${r.n}</div><div class="review-meta">${r.m}</div></div>
+        <div class="review-id"><div class="review-name">${r.n}</div><div class="review-meta">${r.m}</div></div>
+        <div class="review-stars">★★★★★</div>
       </div>
+      <p class="review-text">“${r.t}”</p>
     </div>`
     )
     .join("");

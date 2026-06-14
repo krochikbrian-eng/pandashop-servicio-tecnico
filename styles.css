@@ -296,16 +296,17 @@ img{max-width:100%;display:block}
 .reviews-stars{color:#ffb100;font-size:22px;letter-spacing:2px}
 .reviews-count{color:var(--muted);font-size:14px;width:100%;text-align:center;margin-top:2px}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:14px;transition:transform .2s,box-shadow .2s,border-color .2s}
 .review:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(17,17,17,.08);border-color:rgba(228,20,27,.3)}
-.review-stars{color:#ffb100;font-size:16px;letter-spacing:1px}
-.review-text{color:var(--text);font-size:15px;line-height:1.55;flex:1}
-.review-who{display:flex;align-items:center;gap:11px;margin-top:2px}
+.review-head{display:flex;align-items:center;gap:11px}
+.review-id{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.review-stars{color:#ffb100;font-size:14px;letter-spacing:1px;margin-left:auto;flex:none}
+.review-text{color:var(--text);font-size:15px;line-height:1.55}
 .review-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--red),#a30c12);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex:none}
 .review-name{font-weight:700;font-size:14.5px}
-.review-meta{color:var(--muted);font-size:12.5px}
+.review-meta{color:var(--muted);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:880px){.reviews{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.reviews{grid-template-columns:1fr}}
+@media(max-width:560px){.reviews{grid-template-columns:1fr;max-width:480px;margin-inline:auto}}
 
 /* Mayoristas */
 #mayoristas{padding:46px 0}
