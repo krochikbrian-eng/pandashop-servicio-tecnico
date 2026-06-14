@@ -13,8 +13,71 @@
     <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
       <circle cx="3" cy="3" r="2.3" fill="#e4141b" fill-opacity="0.11"/>
     </pattern>
+
+    <!-- Marco metálico del celular -->
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#41464f"/>
+      <stop offset="22%" stop-color="#23262d"/>
+      <stop offset="50%" stop-color="#15181d"/>
+      <stop offset="78%" stop-color="#23262d"/>
+      <stop offset="100%" stop-color="#0c0e12"/>
+    </linearGradient>
+    <linearGradient id="frameEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6b7079" stop-opacity="0.9"/>
+      <stop offset="12%" stop-color="#2a2e36" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#2a2e36" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+    </linearGradient>
+    <!-- Vidrio de pantalla -->
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b303b"/>
+      <stop offset="55%" stop-color="#1b1f27"/>
+      <stop offset="100%" stop-color="#0f1217"/>
+    </linearGradient>
+    <linearGradient id="glare" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="redbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a5f"/>
+      <stop offset="100%" stop-color="#d3101a"/>
+    </linearGradient>
+    <radialGradient id="redbtn" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#ff6a6f"/>
+      <stop offset="60%" stop-color="#e4141b"/>
+      <stop offset="100%" stop-color="#b00b12"/>
+    </radialGradient>
+    <!-- Destornillador -->
+    <linearGradient id="shaft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9aa0a9"/>
+      <stop offset="35%" stop-color="#e9edf2"/>
+      <stop offset="55%" stop-color="#c3c8d0"/>
+      <stop offset="100%" stop-color="#7c828c"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a5f"/>
+      <stop offset="45%" stop-color="#e4141b"/>
+      <stop offset="100%" stop-color="#a90a11"/>
+    </linearGradient>
+    <!-- Badges 3D -->
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f3f4f7"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3f48"/>
+      <stop offset="100%" stop-color="#111418"/>
+    </linearGradient>
+
     <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
       <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#c01016" flood-opacity="0.18"/>
+    </filter>
+    <filter id="dropPhone" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#7a1f24" flood-opacity="0.28"/>
+    </filter>
+    <filter id="blurShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
     </filter>
   </defs>
 
@@ -24,63 +87,92 @@
   <circle cx="1520" cy="640" r="220" fill="#fcdcde" opacity="0.5"/>
   <circle cx="1480" cy="90"  r="150" fill="#fbcccf" opacity="0.45"/>
 
-  <!-- faint tool/tech watermarks behind the text zone (very subtle) -->
   <g fill="none" stroke="#111" stroke-opacity="0.05" stroke-width="6">
     <circle cx="300" cy="180" r="50"/><path d="M270 180h60 M300 150v60"/>
     <rect x="170" y="520" width="120" height="80" rx="14"/>
     <circle cx="560" cy="120" r="34"/>
   </g>
 
-  <!-- ===== Central: phone being repaired ===== -->
-  <g transform="rotate(-12 1180 380)" filter="url(#soft)">
-    <rect x="1090" y="220" width="186" height="320" rx="32" fill="#111"/>
-    <rect x="1105" y="239" width="156" height="282" rx="19" fill="#23262f"/>
-    <rect x="1128" y="270" width="84" height="13" rx="6.5" fill="#e4141b"/>
-    <rect x="1128" y="298" width="112" height="8" rx="4" fill="#5a5f6c"/>
-    <rect x="1128" y="316" width="96" height="8" rx="4" fill="#5a5f6c"/>
-    <circle cx="1183" cy="430" r="36" fill="#2f3340"/>
-    <path d="M1167 430h32 M1183 414v32" stroke="#e4141b" stroke-width="6.5" stroke-linecap="round"/>
-  </g>
-  <g transform="rotate(36 1300 470)">
-    <rect x="1291" y="470" width="18" height="112" rx="9" fill="#e4141b"/>
-    <rect x="1296" y="438" width="9" height="36" fill="#111"/>
-    <rect x="1297.5" y="412" width="6" height="28" fill="#555"/>
+  <!-- ===== Sombra de contacto del celular ===== -->
+  <ellipse cx="1205" cy="600" rx="150" ry="42" fill="#9a2a2f" opacity="0.22" filter="url(#blurShadow)"/>
+
+  <!-- ===== Celular 3D ===== -->
+  <g transform="rotate(-12 1180 380)" filter="url(#dropPhone)">
+    <!-- cuerpo / marco -->
+    <rect x="1086" y="214" width="196" height="336" rx="38" fill="url(#frame)"/>
+    <rect x="1086" y="214" width="196" height="336" rx="38" fill="url(#frameEdge)"/>
+    <!-- pantalla -->
+    <rect x="1100" y="228" width="168" height="308" rx="26" fill="url(#screen)"/>
+    <!-- reflejo diagonal -->
+    <path d="M1100 252 L1268 228 L1268 300 L1100 392 Z" fill="url(#glare)"/>
+    <!-- isla de cámara / notch -->
+    <rect x="1158" y="241" width="52" height="11" rx="5.5" fill="#0a0c10"/>
+    <circle cx="1224" cy="246" r="4.5" fill="#0a0c10"/>
+    <!-- contenido UI -->
+    <rect x="1124" y="282" width="96" height="15" rx="7.5" fill="url(#redbar)"/>
+    <rect x="1124" y="312" width="118" height="9" rx="4.5" fill="#535a66"/>
+    <rect x="1124" y="330" width="100" height="9" rx="4.5" fill="#3f4651"/>
+    <!-- botón central + -->
+    <circle cx="1184" cy="430" r="44" fill="#1d222b"/>
+    <circle cx="1184" cy="430" r="44" fill="none" stroke="#2f3640" stroke-width="2"/>
+    <circle cx="1184" cy="430" r="33" fill="url(#redbtn)"/>
+    <path d="M1184 414v32 M1168 430h32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <!-- brillo superior -->
+    <ellipse cx="1150" cy="252" rx="46" ry="16" fill="#ffffff" opacity="0.06"/>
   </g>
 
-  <!-- ===== Orbiting device badges (visible margins) ===== -->
-  <!-- controller (top center-right) -->
+  <!-- ===== Destornillador 3D ===== -->
+  <g transform="rotate(34 1300 470)">
+    <!-- punta -->
+    <rect x="1294.5" y="404" width="7" height="34" rx="2" fill="#6b7178"/>
+    <!-- vástago metálico -->
+    <rect x="1291" y="436" width="14" height="46" rx="3" fill="url(#shaft)"/>
+    <!-- collar -->
+    <rect x="1288" y="480" width="20" height="10" rx="3" fill="#2b2f36"/>
+    <!-- mango -->
+    <rect x="1286" y="488" width="24" height="120" rx="12" fill="url(#handle)"/>
+    <rect x="1290" y="494" width="5" height="104" rx="2.5" fill="#ffffff" opacity="0.32"/>
+    <ellipse cx="1298" cy="606" rx="12" ry="5" fill="#7d070d" opacity="0.6"/>
+  </g>
+
+  <!-- ===== Badges 3D flotantes ===== -->
+  <!-- joystick -->
   <g transform="translate(1330 150)">
-    <circle r="52" fill="#fff" filter="url(#soft)"/>
+    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
     <g transform="translate(0 1)">
-      <path d="M-32 -3C-34 4 -33 15 -26 15 -20 15 -16 8 -10 6 -6 4.5 -4 4 0 4 4 4 6 4.5 10 6 16 8 20 15 26 15 33 15 34 4 32 -3 30 -9 22 -10 14 -9 8 -8 4 -7 0 -7 -4 -7 -8 -8 -14 -9 -22 -10 -30 -9 -32 -3Z" fill="#111"/>
+      <path d="M-32 -3C-34 4 -33 15 -26 15 -20 15 -16 8 -10 6 -6 4.5 -4 4 0 4 4 4 6 4.5 10 6 16 8 20 15 26 15 33 15 34 4 32 -3 30 -9 22 -10 14 -9 8 -8 4 -7 0 -7 -4 -7 -8 -8 -14 -9 -22 -10 -30 -9 -32 -3Z" fill="url(#metal)"/>
       <path d="M-21 2h12 M-15 -4v12" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
       <circle cx="12" cy="3" r="3.2" fill="#e4141b"/><circle cx="19" cy="-3" r="3.2" fill="#23c483"/>
     </g>
   </g>
-  <!-- drone (right upper) -->
+  <!-- drone -->
   <g transform="translate(1520 360)">
-    <circle r="52" fill="#fff" filter="url(#soft)"/>
-    <g stroke="#111" stroke-width="6" stroke-linecap="round"><line x1="-24" y1="-18" x2="24" y2="18"/><line x1="24" y1="-18" x2="-24" y2="18"/></g>
-    <circle cx="-24" cy="-18" r="10" fill="none" stroke="#111" stroke-width="5"/>
-    <circle cx="24" cy="-18" r="10" fill="none" stroke="#111" stroke-width="5"/>
-    <circle cx="-24" cy="18" r="10" fill="none" stroke="#111" stroke-width="5"/>
-    <circle cx="24" cy="18" r="10" fill="none" stroke="#111" stroke-width="5"/>
-    <rect x="-14" y="-11" width="28" height="22" rx="6" fill="#e4141b"/>
+    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
+    <g stroke="#15181d" stroke-width="6" stroke-linecap="round"><line x1="-24" y1="-18" x2="24" y2="18"/><line x1="24" y1="-18" x2="-24" y2="18"/></g>
+    <circle cx="-24" cy="-18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
+    <circle cx="24" cy="-18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
+    <circle cx="-24" cy="18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
+    <circle cx="24" cy="18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
+    <rect x="-14" y="-11" width="28" height="22" rx="6" fill="url(#redbtn)"/>
   </g>
-  <!-- laptop (lower center-right) -->
+  <!-- laptop -->
   <g transform="translate(1290 640)">
-    <circle r="52" fill="#fff" filter="url(#soft)"/>
-    <rect x="-27" y="-22" width="54" height="36" rx="4" fill="#111"/>
+    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
+    <rect x="-27" y="-22" width="54" height="36" rx="4" fill="url(#metal)"/>
     <rect x="-22" y="-17" width="44" height="26" rx="2" fill="#2f3340"/>
     <rect x="-19" y="-12" width="20" height="5" rx="2.5" fill="#e4141b"/>
-    <path d="M-34 16h68l6 8h-80z" fill="#111"/>
+    <path d="M-34 16h68l6 8h-80z" fill="#15181d"/>
   </g>
-  <!-- headphones (far right lower) -->
+  <!-- auriculares -->
   <g transform="translate(1545 600)">
-    <circle r="52" fill="#fff" filter="url(#soft)"/>
-    <path d="M-24 6a24 24 0 0 1 48 0" fill="none" stroke="#111" stroke-width="9" stroke-linecap="round"/>
-    <rect x="-30" y="2" width="13" height="24" rx="6" fill="#e4141b"/>
-    <rect x="17" y="2" width="13" height="24" rx="6" fill="#e4141b"/>
+    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
+    <path d="M-24 6a24 24 0 0 1 48 0" fill="none" stroke="#15181d" stroke-width="9" stroke-linecap="round"/>
+    <rect x="-30" y="2" width="13" height="24" rx="6" fill="url(#redbtn)"/>
+    <rect x="17" y="2" width="13" height="24" rx="6" fill="url(#redbtn)"/>
   </g>
 
   <rect width="1600" height="760" fill="url(#fade)"/>
