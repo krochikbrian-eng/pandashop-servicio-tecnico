@@ -1,20 +1,39 @@
-<svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Servicio técnico y reparación">
+<svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparación de celulares">
   <defs><clipPath id="r1"><rect width="420" height="280" rx="20"/></clipPath></defs>
   <g clip-path="url(#r1)">
     <rect width="420" height="280" fill="#fff5f5"/>
-    <circle cx="350" cy="60" r="90" fill="#fde2e3"/>
-    <!-- wrench -->
-    <g transform="rotate(40 210 150)">
-      <rect x="196" y="120" width="28" height="120" rx="12" fill="#111"/>
-      <path d="M210 95a34 34 0 1 0 0 68 34 34 0 0 0 0-68zm0 18a16 16 0 1 1 0 32 16 16 0 0 1 0-32z" fill="#111"/>
-      <path d="M186 100l18-12 14 18-18 12z" fill="#e4141b"/>
+    <circle cx="350" cy="58" r="92" fill="#fde2e3"/>
+    <circle cx="70" cy="210" r="64" fill="#fceaea"/>
+
+    <!-- Celular -->
+    <g transform="rotate(-10 205 128)">
+      <rect x="158" y="44" width="114" height="168" rx="20" fill="#14171c"/>
+      <rect x="170" y="60" width="90" height="124" rx="11" fill="#232830"/>
+      <!-- glare -->
+      <path d="M176 64h30l-30 56z" fill="#2e343d"/>
+      <!-- barra roja + lineas -->
+      <rect x="184" y="76" width="42" height="9" rx="4.5" fill="#e4141b"/>
+      <rect x="184" y="94" width="64" height="6" rx="3" fill="#3a414b"/>
+      <rect x="184" y="106" width="48" height="6" rx="3" fill="#3a414b"/>
+      <!-- camara -->
+      <circle cx="242" cy="56" r="5" fill="#2a2f37"/>
+      <!-- flex de carga -->
+      <path d="M205 212c-6 8 4 12 0 20" fill="none" stroke="#e0a52a" stroke-width="6" stroke-linecap="round"/>
     </g>
-    <!-- screwdriver -->
-    <g transform="rotate(-30 250 150)">
-      <rect x="240" y="150" width="18" height="86" rx="8" fill="#e4141b"/>
-      <rect x="244" y="120" width="10" height="36" fill="#111"/>
-      <rect x="246" y="96" width="6" height="28" fill="#444"/>
+
+    <!-- Modulo / glass siendo cambiado -->
+    <g transform="rotate(16 300 78)">
+      <rect x="262" y="60" width="80" height="30" rx="8" fill="#eef1f5" stroke="#d9dee6" stroke-width="2"/>
+      <rect x="270" y="70" width="40" height="6" rx="3" fill="#16a34a"/>
     </g>
+
+    <!-- Destornillador -->
+    <g transform="rotate(38 120 196)">
+      <rect x="100" y="150" width="20" height="84" rx="9" fill="#e4141b"/>
+      <rect x="105" y="120" width="10" height="34" fill="#14171c"/>
+      <rect x="107" y="96" width="6" height="28" fill="#555"/>
+    </g>
+
     <rect x="0" y="232" width="420" height="48" fill="#111"/>
     <text x="24" y="263" fill="#fff" font-family="Plus Jakarta Sans,Arial" font-weight="800" font-size="22">Servicio Técnico</text>
   </g>
