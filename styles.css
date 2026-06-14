@@ -314,6 +314,7 @@ img{max-width:100%;display:block}
 
 /* Form */
 .form-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:start}
+.form-left{display:flex;flex-direction:column;align-items:center;text-align:center}
 .form-intro{display:flex;flex-direction:column;align-items:center;text-align:center}
 .quote-art{width:100%;margin-top:9px;display:flex;justify-content:flex-end}
 .quote-art img{width:240px;max-width:80%;display:block}
@@ -332,7 +333,7 @@ img{max-width:100%;display:block}
 .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(228,20,27,.12)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-note{text-align:center;color:var(--muted);font-size:12px;font-weight:400}
-@media(max-width:880px){.form-wrap{grid-template-columns:1fr;gap:30px}.form-row{grid-template-columns:1fr}.quote-art{display:none}.form{width:100%;max-width:540px;margin:0 auto}}
+@media(max-width:880px){.form-wrap{display:flex;flex-direction:column;gap:26px}.form-row{grid-template-columns:1fr}.form-left{display:contents}.form-intro{order:1}.form{order:2;width:100%;max-width:540px;margin:0 auto}.form-extras{order:3;align-self:center}.quote-art{display:none}}
 
 /* FAQ */
 .faq{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
