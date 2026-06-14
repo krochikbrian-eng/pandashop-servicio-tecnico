@@ -231,7 +231,6 @@ img{max-width:100%;display:block}
 .cat-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(17,17,17,.1);border-color:rgba(228,20,27,.4)}
 .cat-card img{width:100%;height:auto;display:block;background:#f5f6f8;transition:transform .4s ease}
 .cat-card:hover img{transform:scale(1.06)}
-.cat-card-illu img{background:linear-gradient(160deg,#fff2f1,#ffe6e5)}
 .cat-body{padding:16px 18px}
 .cat-body h3{font-size:17px;margin-bottom:3px}
 .cat-body p{color:var(--muted);font-size:13.5px}
