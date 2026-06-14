@@ -1,9 +1,9 @@
-<svg viewBox="0 0 360 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparación de celular">
+<svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparación de celular">
   <defs>
-    <radialGradient id="mglow" cx="50%" cy="38%" r="70%">
-      <stop offset="0%" stop-color="#ffe3e4"/>
-      <stop offset="70%" stop-color="#fff4f4"/>
-      <stop offset="100%" stop-color="#ffffff"/>
+    <radialGradient id="mhalo" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#ffd9db" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#ffe9ea" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="mframe" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#41464f"/>
@@ -42,45 +42,44 @@
       <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#c01016" flood-opacity="0.2"/>
     </filter>
     <filter id="mphone" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#7a1f24" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#7a1f24" flood-opacity="0.32"/>
     </filter>
-    <filter id="mblur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="mblur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="11"/></filter>
   </defs>
 
-  <rect width="360" height="230" rx="20" fill="url(#mglow)"/>
-  <circle cx="280" cy="60" r="95" fill="#fcd5d7" opacity="0.45"/>
-  <circle cx="70" cy="185" r="62" fill="#fcdcde" opacity="0.45"/>
+  <!-- halo suave (sin recuadro, fondo transparente) -->
+  <circle cx="180" cy="120" r="118" fill="url(#mhalo)"/>
 
   <!-- sombra de contacto -->
-  <ellipse cx="178" cy="186" rx="78" ry="20" fill="#9a2a2f" opacity="0.22" filter="url(#mblur)"/>
+  <ellipse cx="180" cy="208" rx="84" ry="20" fill="#9a2a2f" opacity="0.2" filter="url(#mblur)"/>
 
   <!-- celular 3D -->
-  <g transform="rotate(-10 180 115)" filter="url(#mphone)">
-    <rect x="128" y="36" width="104" height="170" rx="22" fill="url(#mframe)"/>
-    <rect x="136" y="44" width="88" height="154" rx="15" fill="url(#mscreen)"/>
-    <path d="M136 58 L224 44 L224 86 L136 132 Z" fill="url(#mglare)"/>
-    <rect x="166" y="50" width="28" height="6" rx="3" fill="#0a0c10"/>
-    <rect x="150" y="74" width="56" height="9" rx="4.5" fill="url(#mredbar)"/>
-    <rect x="150" y="91" width="68" height="6" rx="3" fill="#535a66"/>
-    <rect x="150" y="103" width="56" height="6" rx="3" fill="#3f4651"/>
-    <circle cx="180" cy="150" r="26" fill="#1d222b"/>
-    <circle cx="180" cy="150" r="19" fill="url(#mredbtn)"/>
-    <path d="M180 141v18 M171 150h18" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/>
+  <g transform="rotate(-9 180 120)" filter="url(#mphone)">
+    <rect x="128" y="40" width="104" height="170" rx="22" fill="url(#mframe)"/>
+    <rect x="136" y="48" width="88" height="154" rx="15" fill="url(#mscreen)"/>
+    <path d="M136 62 L224 48 L224 90 L136 136 Z" fill="url(#mglare)"/>
+    <rect x="166" y="54" width="28" height="6" rx="3" fill="#0a0c10"/>
+    <rect x="150" y="78" width="56" height="9" rx="4.5" fill="url(#mredbar)"/>
+    <rect x="150" y="95" width="68" height="6" rx="3" fill="#535a66"/>
+    <rect x="150" y="107" width="56" height="6" rx="3" fill="#3f4651"/>
+    <circle cx="180" cy="154" r="26" fill="#1d222b"/>
+    <circle cx="180" cy="154" r="19" fill="url(#mredbtn)"/>
+    <path d="M180 145v18 M171 154h18" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/>
   </g>
 
   <!-- destornillador 3D -->
-  <g transform="rotate(40 250 150)">
-    <rect x="246.5" y="96" width="5" height="22" rx="1.6" fill="#6b7178"/>
-    <rect x="244" y="116" width="10" height="34" rx="2.4" fill="url(#mshaft)"/>
-    <rect x="242" y="148" width="14" height="8" rx="2.4" fill="#2b2f36"/>
-    <rect x="241" y="154" width="16" height="78" rx="8" fill="url(#mhandle)"/>
-    <rect x="244" y="159" width="3.5" height="68" rx="1.8" fill="#fff" opacity="0.32"/>
+  <g transform="rotate(40 252 158)">
+    <rect x="248.5" y="104" width="5" height="22" rx="1.6" fill="#6b7178"/>
+    <rect x="246" y="124" width="10" height="34" rx="2.4" fill="url(#mshaft)"/>
+    <rect x="244" y="156" width="14" height="8" rx="2.4" fill="#2b2f36"/>
+    <rect x="243" y="162" width="16" height="78" rx="8" fill="url(#mhandle)"/>
+    <rect x="246" y="167" width="3.5" height="68" rx="1.8" fill="#fff" opacity="0.32"/>
   </g>
 
-  <!-- badge engranaje (reparación) -->
-  <g transform="translate(296 168)">
+  <!-- badge engranaje -->
+  <g transform="translate(286 176)">
     <circle r="30" fill="url(#mbadge)" filter="url(#msoft)"/>
-    <g fill="url(#mmetal)" transform="scale(0.9)">
+    <g fill="url(#mmetal)" transform="scale(0.92)">
       <path d="M0 -19 4 -17 6 -22 11 -20 10 -15 14 -13 18 -16 21 -12 17 -9 18 -4 23 -4 23 2 18 3 17 8 21 11 18 15 14 13 10 16 11 21 6 22 4 18 0 19 -4 18 -6 22 -11 20 -10 15 -14 13 -18 16 -21 12 -17 9 -18 4 -23 4 -23 -2 -18 -3 -17 -8 -21 -11 -18 -15 -14 -13 -10 -16 -11 -21 -6 -22 -4 -18 0 -19Z"/>
     </g>
     <circle r="8.5" fill="#fff"/>

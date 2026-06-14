@@ -70,8 +70,33 @@
       <stop offset="100%" stop-color="#111418"/>
     </linearGradient>
 
+    <!-- Badge tipo moneda 3D -->
+    <radialGradient id="coin" cx="38%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="62%" stop-color="#fbfbfd"/>
+      <stop offset="100%" stop-color="#e9ebf0"/>
+    </radialGradient>
+    <radialGradient id="coinHi" cx="36%" cy="26%" r="42%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dev" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d424b"/>
+      <stop offset="55%" stop-color="#1c1f25"/>
+      <stop offset="100%" stop-color="#0a0c10"/>
+    </linearGradient>
+    <linearGradient id="devLite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#54596300"/>
+      <stop offset="0%" stop-color="#6a7079" stop-opacity="0.55"/>
+      <stop offset="40%" stop-color="#6a7079" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="lens" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#3a4150"/>
+      <stop offset="70%" stop-color="#11141a"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </radialGradient>
     <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#c01016" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#7a1f24" flood-opacity="0.22"/>
     </filter>
     <filter id="dropPhone" x="-60%" y="-60%" width="220%" height="220%">
       <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#7a1f24" flood-opacity="0.28"/>
@@ -135,44 +160,71 @@
     <ellipse cx="1298" cy="606" rx="12" ry="5" fill="#7d070d" opacity="0.6"/>
   </g>
 
-  <!-- ===== Badges 3D flotantes ===== -->
-  <!-- joystick -->
+  <!-- ===== Badges 3D flotantes (estilo moneda con relieve) ===== -->
+  <!-- joystick / gamepad -->
   <g transform="translate(1330 150)">
-    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
-    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
-    <g transform="translate(0 1)">
-      <path d="M-32 -3C-34 4 -33 15 -26 15 -20 15 -16 8 -10 6 -6 4.5 -4 4 0 4 4 4 6 4.5 10 6 16 8 20 15 26 15 33 15 34 4 32 -3 30 -9 22 -10 14 -9 8 -8 4 -7 0 -7 -4 -7 -8 -8 -14 -9 -22 -10 -30 -9 -32 -3Z" fill="url(#metal)"/>
-      <path d="M-21 2h12 M-15 -4v12" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
-      <circle cx="12" cy="3" r="3.2" fill="#e4141b"/><circle cx="19" cy="-3" r="3.2" fill="#23c483"/>
+    <circle r="52" fill="url(#coin)" filter="url(#soft)"/>
+    <circle r="51" fill="url(#coinHi)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 2)">
+      <ellipse cx="0" cy="20" rx="26" ry="6" fill="#7a1f24" opacity="0.12"/>
+      <path d="M-30 -6c-7 1-11 8-12 16-1 7 0 16 7 17 6 1 10-5 13-11 2-3 4-4 8-4h8c4 0 6 1 8 4 3 6 7 12 13 11 7-1 8-10 7-17-1-8-5-15-12-16-7-1-14 3-21 3s-14-4-21-3Z" fill="url(#dev)"/>
+      <path d="M-30 -6c-7 1-11 8-12 16 14-9 26-11 42-11s28 2 42 11c-1-8-5-15-12-16-7-1-14 3-21 3s-14-4-21-3Z" fill="#5a606b" opacity="0.45"/>
+      <path d="M-21 5h11 M-15.5 -0.5v11" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="13" cy="9" r="3" fill="#e4141b"/><circle cx="13" cy="-1" r="3" fill="#ffb100"/>
+      <circle cx="8" cy="4" r="3" fill="#23c483"/><circle cx="18" cy="4" r="3" fill="#3aa0ff"/>
     </g>
   </g>
   <!-- drone -->
   <g transform="translate(1520 360)">
-    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
-    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
-    <g stroke="#15181d" stroke-width="6" stroke-linecap="round"><line x1="-24" y1="-18" x2="24" y2="18"/><line x1="24" y1="-18" x2="-24" y2="18"/></g>
-    <circle cx="-24" cy="-18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
-    <circle cx="24" cy="-18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
-    <circle cx="-24" cy="18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
-    <circle cx="24" cy="18" r="10" fill="none" stroke="#15181d" stroke-width="5"/>
-    <rect x="-14" y="-11" width="28" height="22" rx="6" fill="url(#redbtn)"/>
+    <circle r="52" fill="url(#coin)" filter="url(#soft)"/>
+    <circle r="51" fill="url(#coinHi)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 1)">
+      <line x1="-21" y1="-15" x2="21" y2="15" stroke="#2b2f37" stroke-width="6" stroke-linecap="round"/>
+      <line x1="21" y1="-15" x2="-21" y2="15" stroke="#2b2f37" stroke-width="6" stroke-linecap="round"/>
+      <g>
+        <ellipse cx="-26" cy="-19" rx="13" ry="3.4" fill="#3a4150" opacity="0.85"/>
+        <ellipse cx="26" cy="-19" rx="13" ry="3.4" fill="#3a4150" opacity="0.85"/>
+        <ellipse cx="-26" cy="19" rx="13" ry="3.4" fill="#3a4150" opacity="0.85"/>
+        <ellipse cx="26" cy="19" rx="13" ry="3.4" fill="#3a4150" opacity="0.85"/>
+      </g>
+      <circle cx="-26" cy="-19" r="5.5" fill="url(#dev)"/><circle cx="26" cy="-19" r="5.5" fill="url(#dev)"/>
+      <circle cx="-26" cy="19" r="5.5" fill="url(#dev)"/><circle cx="26" cy="19" r="5.5" fill="url(#dev)"/>
+      <rect x="-16" y="-13" width="32" height="26" rx="8" fill="url(#dev)"/>
+      <circle cx="0" cy="6" r="6" fill="url(#lens)"/><circle cx="-2" cy="4" r="1.6" fill="#fff" opacity="0.5"/>
+      <rect x="-9" y="-9" width="18" height="6" rx="3" fill="#e4141b"/>
+    </g>
   </g>
   <!-- laptop -->
   <g transform="translate(1290 640)">
-    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
-    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
-    <rect x="-27" y="-22" width="54" height="36" rx="4" fill="url(#metal)"/>
-    <rect x="-22" y="-17" width="44" height="26" rx="2" fill="#2f3340"/>
-    <rect x="-19" y="-12" width="20" height="5" rx="2.5" fill="#e4141b"/>
-    <path d="M-34 16h68l6 8h-80z" fill="#15181d"/>
+    <circle r="52" fill="url(#coin)" filter="url(#soft)"/>
+    <circle r="51" fill="url(#coinHi)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 -2)">
+      <rect x="-27" y="-22" width="54" height="37" rx="5" fill="url(#dev)"/>
+      <rect x="-27" y="-22" width="54" height="14" rx="5" fill="url(#devLite)"/>
+      <rect x="-22" y="-17" width="44" height="27" rx="3" fill="#10131a"/>
+      <rect x="-18" y="-12" width="22" height="5" rx="2.5" fill="#e4141b"/>
+      <rect x="-18" y="-3" width="30" height="3.4" rx="1.7" fill="#3a414d"/>
+      <rect x="-18" y="3" width="24" height="3.4" rx="1.7" fill="#2d333d"/>
+      <path d="M-33 15h66l7 9q1 2-1 2h-78q-2 0-1-2z" fill="#1b1f27"/>
+      <rect x="-9" y="17" width="18" height="3" rx="1.5" fill="#3a414d"/>
+    </g>
   </g>
   <!-- auriculares -->
   <g transform="translate(1545 600)">
-    <circle r="52" fill="url(#badge)" filter="url(#soft)"/>
-    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1"/>
-    <path d="M-24 6a24 24 0 0 1 48 0" fill="none" stroke="#15181d" stroke-width="9" stroke-linecap="round"/>
-    <rect x="-30" y="2" width="13" height="24" rx="6" fill="url(#redbtn)"/>
-    <rect x="17" y="2" width="13" height="24" rx="6" fill="url(#redbtn)"/>
+    <circle r="52" fill="url(#coin)" filter="url(#soft)"/>
+    <circle r="51" fill="url(#coinHi)"/>
+    <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 2)">
+      <path d="M-25 4a25 25 0 0 1 50 0" fill="none" stroke="url(#dev)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M-25 2a25 25 0 0 1 50 0" fill="none" stroke="#6a7079" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
+      <rect x="-31" y="2" width="15" height="26" rx="7" fill="url(#dev)"/>
+      <rect x="16" y="2" width="15" height="26" rx="7" fill="url(#dev)"/>
+      <rect x="-28" y="6" width="9" height="18" rx="4.5" fill="#e4141b"/>
+      <rect x="19" y="6" width="9" height="18" rx="4.5" fill="#e4141b"/>
+    </g>
   </g>
 
   <rect width="1600" height="760" fill="url(#fade)"/>

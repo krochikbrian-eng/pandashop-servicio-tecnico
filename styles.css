@@ -98,7 +98,7 @@ img{max-width:100%;display:block}
 .btn-block{width:100%}
 
 /* Hero */
-.hero{padding:72px 0 64px;background:#fff url("/assets/hero-bg.svg?v=5") center right / cover no-repeat;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero{padding:72px 0 64px;background:#fff url("/assets/hero-bg.svg?v=6") center right / cover no-repeat;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);z-index:0;pointer-events:none}
 .hero::before{width:440px;height:440px;background:radial-gradient(circle,rgba(228,20,27,.20),transparent 70%);top:-140px;left:-90px}
 .hero::after{width:380px;height:380px;background:radial-gradient(circle,rgba(255,90,96,.16),transparent 70%);bottom:-150px;right:-70px}
@@ -149,7 +149,7 @@ img{max-width:100%;display:block}
 .hero-card li:last-child{border-bottom:0}
 .hero-card-list li::before{content:"";width:20px;height:20px;border-radius:50%;flex:none;background:rgba(228,20,27,.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e4141b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
 .hero-card-btn{display:block;width:fit-content;margin:0 auto}
-@media(max-width:880px){.hero-inner{grid-template-columns:1fr;gap:26px}.hero h1{font-size:36px}.hero-media{display:none}.hero-mobile-img{display:block;width:min(78%,300px);margin:0 auto 18px;border-radius:18px;box-shadow:0 14px 30px rgba(154,42,47,.16)}}
+@media(max-width:880px){.hero-inner{grid-template-columns:1fr;gap:26px}.hero h1{font-size:36px}.hero-media{display:none}.hero-mobile-img{display:block;width:min(84%,320px);margin:-4px auto 10px;background:none;box-shadow:none}}
 
 /* Trust badges strip */
 .trust-strip{background:#fff;border-bottom:1px solid var(--line)}
