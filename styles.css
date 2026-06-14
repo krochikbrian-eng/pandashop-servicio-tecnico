@@ -186,6 +186,7 @@ img{max-width:100%;display:block}
 
 /* Sections */
 .section{padding:50px 0 60px}
+#presupuesto{padding-top:30px}
 .section-alt{background:var(--bg-soft);background-image:radial-gradient(rgba(228,20,27,.05) 1.4px,transparent 1.5px);background-size:24px 24px}
 .section-head{text-align:center;max-width:640px;margin:0 auto 44px}
 .section-head h2{font-size:34px;font-weight:800;letter-spacing:-.5px}
