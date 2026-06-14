@@ -166,9 +166,9 @@ img{max-width:100%;display:block}
 @media(prefers-reduced-motion:reduce){.brands-track{animation:none;flex-wrap:wrap;justify-content:center}}
 
 /* Stats band */
-.stats{background:#111;color:#fff}
+.stats{background:linear-gradient(135deg,#2b3140,#20242e);color:#fff}
 .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:34px 22px}
-.stat{text-align:center;border-right:1px solid #2a2d34}
+.stat{text-align:center;border-right:1px solid rgba(255,255,255,.12)}
 .stat:last-child{border-right:0}
 .stat strong{display:block;font-size:28px;font-weight:800;letter-spacing:-.5px}
 .stat strong{color:#fff}
