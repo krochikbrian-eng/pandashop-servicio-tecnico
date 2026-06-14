@@ -11,7 +11,10 @@
   --radius:18px;
   --maxw:1160px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+a,button,.btn,.nav-toggle,.nav a{-webkit-tap-highlight-color:transparent}
+.nav-toggle{-webkit-appearance:none;appearance:none;outline:none}
+.nav-toggle:focus,.nav-toggle:active,.nav a:active,.nav a:focus{background:transparent}
 html{scroll-behavior:smooth}
 body{
   font-family:'Plus Jakarta Sans',system-ui,Segoe UI,Roboto,sans-serif;
