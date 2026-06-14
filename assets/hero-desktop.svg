@@ -1,0 +1,189 @@
+<svg viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparación de celulares, tablets, consolas, drones y notebooks">
+  <defs>
+    <radialGradient id="halo" cx="46%" cy="48%" r="56%">
+      <stop offset="0%" stop-color="#ffd9db" stop-opacity="0.7"/>
+      <stop offset="62%" stop-color="#ffe9ea" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#41464f"/><stop offset="48%" stop-color="#16191e"/><stop offset="100%" stop-color="#0b0d11"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b303b"/><stop offset="60%" stop-color="#1a1e26"/><stop offset="100%" stop-color="#0f1217"/>
+    </linearGradient>
+    <linearGradient id="tscreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#30353f"/><stop offset="60%" stop-color="#1d2129"/><stop offset="100%" stop-color="#11141a"/>
+    </linearGradient>
+    <linearGradient id="glare" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.18"/><stop offset="45%" stop-color="#fff" stop-opacity="0.03"/><stop offset="60%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="redbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a5f"/><stop offset="100%" stop-color="#d3101a"/>
+    </linearGradient>
+    <radialGradient id="redbtn" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#ff6a6f"/><stop offset="60%" stop-color="#e4141b"/><stop offset="100%" stop-color="#b00b12"/>
+    </radialGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9aa0a9"/><stop offset="40%" stop-color="#eef1f5"/><stop offset="60%" stop-color="#c3c8d0"/><stop offset="100%" stop-color="#7c828c"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a5f"/><stop offset="45%" stop-color="#e4141b"/><stop offset="100%" stop-color="#a90a11"/>
+    </linearGradient>
+    <radialGradient id="coin" cx="38%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="62%" stop-color="#fbfbfd"/><stop offset="100%" stop-color="#e9ebf0"/>
+    </radialGradient>
+    <radialGradient id="coinHi" cx="36%" cy="26%" r="42%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dev" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d424b"/><stop offset="55%" stop-color="#1c1f25"/><stop offset="100%" stop-color="#0a0c10"/>
+    </linearGradient>
+    <radialGradient id="lens" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#3a4150"/><stop offset="70%" stop-color="#11141a"/><stop offset="100%" stop-color="#05070a"/>
+    </radialGradient>
+    <filter id="phsh" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#5e1418" flood-opacity="0.32"/></filter>
+    <filter id="tbsh" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#5e1418" flood-opacity="0.26"/></filter>
+    <filter id="cosh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#7a1f24" flood-opacity="0.22"/></filter>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="11"/></filter>
+    <clipPath id="phScr"><rect x="160" y="160" width="140" height="250" rx="24"/></clipPath>
+    <style>
+      .fa{animation:fa 3.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .fb{animation:fb 4.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .screw{animation:wg 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 16%}
+      .pulse{animation:pl 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .scan{animation:sc 3s ease-in-out infinite}
+      .bdg{animation:bf 5s ease-in-out infinite;animation-delay:var(--d,0s);transform-box:fill-box;transform-origin:center}
+      .spark{animation:sp 2.6s ease-in-out infinite}
+      .spark.b{animation-delay:1.1s}.spark.c{animation-delay:.6s}
+      @keyframes fa{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+      @keyframes fb{0%,100%{transform:translateY(-4px)}50%{transform:translateY(8px)}}
+      @keyframes wg{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg)}}
+      @keyframes pl{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:.92}}
+      @keyframes sc{0%{transform:translateY(0);opacity:0}15%{opacity:.5}50%{transform:translateY(190px);opacity:.5}65%{opacity:0}100%{opacity:0}}
+      @keyframes bf{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+      @keyframes sp{0%,100%{opacity:0;transform:scale(.4)}45%{opacity:1;transform:scale(1)}}
+      @media(prefers-reduced-motion:reduce){.fa,.fb,.screw,.pulse,.scan,.bdg,.spark{animation:none}}
+    </style>
+  </defs>
+
+  <circle cx="278" cy="278" r="222" fill="url(#halo)"/>
+
+  <!-- TABLET (apaisada, atrás) -->
+  <g class="fb">
+    <ellipse cx="404" cy="392" rx="96" ry="22" fill="#7a1f24" opacity="0.16" filter="url(#blur)"/>
+    <g transform="rotate(8 404 300)" filter="url(#tbsh)">
+      <rect x="312" y="228" width="184" height="142" rx="16" fill="url(#frame)"/>
+      <rect x="313.4" y="229.4" width="181.2" height="139.2" rx="14.6" fill="none" stroke="#6b7079" stroke-width="1.4" opacity="0.5"/>
+      <rect x="322" y="238" width="164" height="122" rx="10" fill="url(#tscreen)"/>
+      <path d="M322 252 L486 238 L486 280 L322 320 Z" fill="url(#glare)"/>
+      <circle cx="317" cy="299" r="2.6" fill="#454b56"/>
+      <rect x="334" y="252" width="58" height="9" rx="4.5" fill="url(#redbar)"/>
+      <rect x="334" y="268" width="86" height="6" rx="3" fill="#535a66"/>
+      <rect x="334" y="282" width="70" height="6" rx="3" fill="#3f4651"/>
+      <!-- pantalla rota -->
+      <g stroke="#d4d8df" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.8">
+        <path d="M430 304 L398 270 M430 304 L470 282 M430 304 L482 318 M430 304 L448 348 M430 304 L398 344 M430 304 L356 304"/>
+        <path d="M398 270 L430 288 M470 282 L430 296 M448 348 L430 320 M398 344 L424 308"/>
+      </g>
+      <circle cx="430" cy="304" r="2.8" fill="#fff" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- CELULAR (adelante) -->
+  <g class="fa">
+    <ellipse cx="228" cy="430" rx="98" ry="24" fill="#7a1f24" opacity="0.2" filter="url(#blur)"/>
+    <g transform="rotate(-8 230 285)" filter="url(#phsh)">
+      <rect x="150" y="150" width="160" height="270" rx="32" fill="url(#frame)"/>
+      <rect x="151.5" y="151.5" width="157" height="267" rx="30.5" fill="none" stroke="#6b7079" stroke-width="1.6" opacity="0.55"/>
+      <rect x="160" y="160" width="140" height="250" rx="24" fill="url(#screen)"/>
+      <g clip-path="url(#phScr)"><rect class="scan" x="160" y="160" width="140" height="26" fill="#ff5a5f" opacity="0"/></g>
+      <path d="M160 186 L300 160 L300 232 L160 326 Z" fill="url(#glare)"/>
+      <rect x="156" y="186" width="3" height="200" rx="1.5" fill="#fff" opacity="0.13"/>
+      <rect x="210" y="173" width="40" height="9" rx="4.5" fill="#0a0c10"/>
+      <circle cx="266" cy="177" r="4" fill="#0a0c10"/>
+      <rect x="180" y="206" width="78" height="13" rx="6.5" fill="url(#redbar)"/>
+      <rect x="180" y="230" width="98" height="8" rx="4" fill="#5b626e"/>
+      <rect x="180" y="246" width="82" height="8" rx="4" fill="#444b56"/>
+      <!-- pantalla rota (zona superior derecha) -->
+      <g clip-path="url(#phScr)" stroke="#d4d8df" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.75">
+        <path d="M276 198 L244 168 M276 198 L298 176 M276 198 L298 228 M276 198 L256 240 M276 198 L240 214"/>
+        <path d="M244 168 L272 188 M298 228 L284 208 M256 240 L272 210"/>
+      </g>
+      <circle cx="276" cy="198" r="2.6" fill="#fff" opacity="0.85"/>
+      <g class="pulse">
+        <circle cx="230" cy="330" r="38" fill="#161b22"/>
+        <circle cx="230" cy="330" r="30" fill="url(#redbtn)"/>
+        <path d="M230 316v28 M216 330h28" stroke="#fff" stroke-width="6.5" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- DESTORNILLADOR -->
+  <g class="screw" transform="rotate(42 332 360)">
+    <rect x="327.5" y="288" width="7" height="30" rx="2" fill="#6b7178"/>
+    <rect x="324" y="316" width="14" height="46" rx="3" fill="url(#shaft)"/>
+    <rect x="321" y="360" width="20" height="11" rx="3" fill="#2b2f36"/>
+    <rect x="319" y="368" width="24" height="104" rx="12" fill="url(#handle)"/>
+    <rect x="323" y="374" width="5" height="90" rx="2.5" fill="#fff" opacity="0.32"/>
+  </g>
+
+  <!-- ===== BADGES (4 círculos 3D) ===== -->
+  <!-- gamepad -->
+  <g transform="translate(472 84)"><g class="bdg" style="--d:0s">
+    <circle r="56" fill="url(#coin)" filter="url(#cosh)"/><circle r="55" fill="url(#coinHi)"/><circle r="56" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 1)">
+      <ellipse cx="0" cy="19" rx="29" ry="6" fill="#7a1f24" opacity="0.12"/>
+      <path d="M-32 -6c-6 1-10 8-11 15-1 7-2 15 4 17 5 2 10-3 13-9 2-3 5-5 10-5h14c5 0 8 2 10 5 3 6 8 11 13 9 6-2 5-10 4-17-1-7-5-14-11-15-8-1-17 2-23 2s-15-3-23-2z" fill="url(#dev)"/>
+      <path d="M-30 -4c-5 1-8 6-9 11 14-7 25-9 39-9s25 2 39 9c-1-5-4-10-9-11-7-1-14 2-20 2s-13-3-20-2z" fill="#fff" opacity="0.1"/>
+      <path d="M-20 4h12 M-14 -2v12" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="15" cy="9" r="3" fill="#e4141b"/><circle cx="15" cy="-1" r="3" fill="#ffb100"/>
+      <circle cx="9" cy="4" r="3" fill="#23c483"/><circle cx="21" cy="4" r="3" fill="#3aa0ff"/>
+    </g>
+  </g></g>
+  <!-- drone -->
+  <g transform="translate(542 276)"><g class="bdg" style="--d:.7s">
+    <circle r="56" fill="url(#coin)" filter="url(#cosh)"/><circle r="55" fill="url(#coinHi)"/><circle r="56" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 1)">
+      <line x1="-23" y1="-16" x2="23" y2="16" stroke="#2b2f37" stroke-width="6.5" stroke-linecap="round"/>
+      <line x1="23" y1="-16" x2="-23" y2="16" stroke="#2b2f37" stroke-width="6.5" stroke-linecap="round"/>
+      <ellipse cx="-28" cy="-20" rx="14" ry="3.6" fill="#3a4150" opacity="0.85"/><ellipse cx="28" cy="-20" rx="14" ry="3.6" fill="#3a4150" opacity="0.85"/>
+      <ellipse cx="-28" cy="20" rx="14" ry="3.6" fill="#3a4150" opacity="0.85"/><ellipse cx="28" cy="20" rx="14" ry="3.6" fill="#3a4150" opacity="0.85"/>
+      <circle cx="-28" cy="-20" r="6" fill="url(#dev)"/><circle cx="28" cy="-20" r="6" fill="url(#dev)"/>
+      <circle cx="-28" cy="20" r="6" fill="url(#dev)"/><circle cx="28" cy="20" r="6" fill="url(#dev)"/>
+      <rect x="-17" y="-14" width="34" height="28" rx="9" fill="url(#dev)"/>
+      <circle cx="0" cy="6" r="6.5" fill="url(#lens)"/><circle cx="-2" cy="4" r="1.7" fill="#fff" opacity="0.5"/>
+      <rect x="-10" y="-10" width="20" height="6" rx="3" fill="#e4141b"/>
+    </g>
+  </g></g>
+  <!-- laptop -->
+  <g transform="translate(300 504)"><g class="bdg" style="--d:1.3s">
+    <circle r="56" fill="url(#coin)" filter="url(#cosh)"/><circle r="55" fill="url(#coinHi)"/><circle r="56" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 -2)">
+      <rect x="-29" y="-24" width="58" height="40" rx="5" fill="url(#dev)"/>
+      <rect x="-24" y="-19" width="48" height="29" rx="3" fill="#10131a"/>
+      <rect x="-19" y="-13" width="24" height="5" rx="2.5" fill="#e4141b"/>
+      <rect x="-19" y="-3" width="32" height="3.6" rx="1.8" fill="#3a414d"/>
+      <rect x="-19" y="4" width="26" height="3.6" rx="1.8" fill="#2d333d"/>
+      <path d="M-35 16h70l7 10q1 2-1 2h-82q-2 0-1-2z" fill="#1b1f27"/>
+      <rect x="-10" y="18" width="20" height="3.4" rx="1.7" fill="#3a414d"/>
+    </g>
+  </g></g>
+  <!-- auriculares -->
+  <g transform="translate(514 462)"><g class="bdg" style="--d:1s">
+    <circle r="56" fill="url(#coin)" filter="url(#cosh)"/><circle r="55" fill="url(#coinHi)"/><circle r="56" fill="none" stroke="#fff" stroke-opacity="0.85" stroke-width="1.2"/>
+    <g transform="translate(0 2)">
+      <path d="M-27 5a27 27 0 0 1 54 0" fill="none" stroke="url(#dev)" stroke-width="8.5" stroke-linecap="round"/>
+      <rect x="-33" y="3" width="16" height="28" rx="8" fill="url(#dev)"/>
+      <rect x="17" y="3" width="16" height="28" rx="8" fill="url(#dev)"/>
+      <rect x="-30" y="7" width="10" height="20" rx="5" fill="#e4141b"/>
+      <rect x="20" y="7" width="10" height="20" rx="5" fill="#e4141b"/>
+    </g>
+  </g></g>
+
+  <!-- destellos -->
+  <g fill="#e4141b">
+    <path class="spark" d="M120 120l3.5 8 8 3.5-8 3.5-3.5 8-3.5-8-8-3.5 8-3.5z"/>
+    <path class="spark b" d="M408 150l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+    <path class="spark c" d="M150 430l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z"/>
+  </g>
+</svg>
