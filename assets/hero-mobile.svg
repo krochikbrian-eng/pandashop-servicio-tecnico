@@ -1,4 +1,4 @@
-<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparación de celular y tablet">
+<svg viewBox="18 0 360 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparación de celular y tablet">
   <defs>
     <radialGradient id="mhalo" cx="50%" cy="44%" r="58%">
       <stop offset="0%" stop-color="#ffd9db" stop-opacity="0.9"/>
@@ -30,12 +30,12 @@
       <stop offset="0%" stop-color="#ff5a5f"/><stop offset="45%" stop-color="#e4141b"/><stop offset="100%" stop-color="#a90a11"/>
     </linearGradient>
     <filter id="mphone" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#7a1f24" flood-opacity="0.32"/>
+      <feDropShadow dx="0" dy="11" stdDeviation="11" flood-color="#5e1418" flood-opacity="0.34"/>
     </filter>
     <filter id="mtab" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#7a1f24" flood-opacity="0.26"/>
+      <feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#5e1418" flood-opacity="0.28"/>
     </filter>
-    <filter id="mblur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="11"/></filter>
+    <filter id="mblur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
     <clipPath id="phScr"><rect x="136" y="48" width="78" height="154" rx="14"/></clipPath>
     <style>
       .float-a{animation:floatA 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
@@ -63,6 +63,7 @@
     <ellipse cx="266" cy="206" rx="58" ry="15" fill="#9a2a2f" opacity="0.16" filter="url(#mblur)"/>
     <g transform="rotate(8 262 130)" filter="url(#mtab)">
       <rect x="220" y="74" width="92" height="120" rx="13" fill="url(#mframe)"/>
+      <rect x="221.2" y="75.2" width="89.6" height="117.6" rx="11.8" fill="none" stroke="#6b7079" stroke-width="1.3" opacity="0.5"/>
       <rect x="227" y="81" width="78" height="106" rx="8" fill="url(#tscreen)"/>
       <path d="M227 92 L305 81 L305 112 L227 140 Z" fill="url(#mglare)"/>
       <rect x="236" y="100" width="40" height="7" rx="3.5" fill="url(#mredbar)"/>
@@ -78,6 +79,8 @@
     <ellipse cx="150" cy="214" rx="74" ry="18" fill="#9a2a2f" opacity="0.2" filter="url(#mblur)"/>
     <g transform="rotate(-9 150 124)" filter="url(#mphone)">
       <rect x="108" y="44" width="104" height="170" rx="22" fill="url(#mframe)"/>
+      <rect x="109.3" y="45.3" width="101.4" height="167.4" rx="20.8" fill="none" stroke="#6b7079" stroke-width="1.4" opacity="0.55"/>
+      <rect x="113" y="60" width="3" height="138" rx="1.5" fill="#fff" opacity="0.13"/>
       <rect x="116" y="52" width="88" height="154" rx="15" fill="url(#mscreen)"/>
       <g clip-path="url(#phScr)" transform="translate(-20 0)">
         <rect class="scan" x="136" y="48" width="78" height="22" fill="#ff5a5f" opacity="0"/>

@@ -99,10 +99,10 @@
       <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#7a1f24" flood-opacity="0.22"/>
     </filter>
     <filter id="dropPhone" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#7a1f24" flood-opacity="0.28"/>
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#5e1418" flood-opacity="0.32"/>
     </filter>
     <filter id="blurShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="22"/>
+      <feGaussianBlur stdDeviation="13"/>
     </filter>
   </defs>
 
@@ -119,48 +119,33 @@
   </g>
 
   <!-- ===== Sombra de contacto del celular ===== -->
-  <ellipse cx="1150" cy="602" rx="155" ry="42" fill="#9a2a2f" opacity="0.22" filter="url(#blurShadow)"/>
+  <ellipse cx="1150" cy="596" rx="140" ry="34" fill="#7a1f24" opacity="0.24" filter="url(#blurShadow)"/>
 
-  <!-- ===== Celular 3D con cambio de módulo ===== -->
-  <g transform="translate(-40 0) rotate(-12 1180 380)">
-    <!-- cuerpo / marco + internos visibles -->
-    <g filter="url(#dropPhone)">
-      <rect x="1086" y="214" width="196" height="336" rx="38" fill="url(#frame)"/>
-      <rect x="1086" y="214" width="196" height="336" rx="38" fill="url(#frameEdge)"/>
-      <!-- recess / internos -->
-      <rect x="1100" y="228" width="168" height="308" rx="26" fill="#23272f"/>
-      <rect x="1116" y="252" width="136" height="118" rx="10" fill="#2c313b"/>
-      <rect x="1116" y="252" width="136" height="118" rx="10" fill="none" stroke="#3a414d" stroke-width="2"/>
-      <rect x="1124" y="266" width="60" height="9" rx="4.5" fill="#e4141b" opacity="0.55"/>
-      <rect x="1124" y="284" width="100" height="6" rx="3" fill="#3a414d"/>
-      <rect x="1124" y="298" width="84" height="6" rx="3" fill="#343b45"/>
-      <rect x="1116" y="384" width="92" height="64" rx="8" fill="#2c313b"/>
-      <rect x="1116" y="384" width="92" height="64" rx="8" fill="none" stroke="#3a414d" stroke-width="2"/>
-      <circle cx="1232" cy="416" r="20" fill="#2c313b"/>
-      <circle cx="1232" cy="416" r="20" fill="none" stroke="#3a414d" stroke-width="2"/>
-      <rect x="1116" y="460" width="136" height="64" rx="8" fill="#2c313b"/>
-    </g>
-
-    <!-- MÓDULO (pantalla) levantado: pivota en la base -->
-    <g transform="rotate(-15 1184 528)" filter="url(#soft)">
-      <rect x="1098" y="226" width="172" height="312" rx="27" fill="url(#frame)"/>
-      <rect x="1100" y="228" width="168" height="308" rx="26" fill="url(#screen)"/>
-      <path d="M1100 252 L1268 228 L1268 300 L1100 392 Z" fill="url(#glare)"/>
-      <rect x="1158" y="241" width="52" height="11" rx="5.5" fill="#0a0c10"/>
-      <circle cx="1224" cy="246" r="4.5" fill="#0a0c10"/>
-      <rect x="1124" y="282" width="96" height="15" rx="7.5" fill="url(#redbar)"/>
-      <rect x="1124" y="312" width="118" height="9" rx="4.5" fill="#535a66"/>
-      <rect x="1124" y="330" width="100" height="9" rx="4.5" fill="#3f4651"/>
-      <circle cx="1184" cy="430" r="33" fill="url(#redbtn)"/>
-      <path d="M1184 416v28 M1170 430h28" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-    </g>
-    <!-- flex que une el módulo con la base -->
-    <g transform="rotate(-15 1184 528)">
-      <rect x="1168" y="516" width="32" height="26" rx="3" fill="#e0a52a"/>
-      <rect x="1172" y="521" width="24" height="3" rx="1.5" fill="#c08f1f"/>
-      <rect x="1172" y="528" width="24" height="3" rx="1.5" fill="#c08f1f"/>
-      <rect x="1172" y="535" width="24" height="3" rx="1.5" fill="#c08f1f"/>
-    </g>
+  <!-- ===== Celular 3D (limpio y nítido) ===== -->
+  <g transform="translate(-30 0) rotate(-12 1180 380)" filter="url(#dropPhone)">
+    <!-- marco -->
+    <rect x="1090" y="214" width="190" height="332" rx="36" fill="url(#frame)"/>
+    <!-- borde especular -->
+    <rect x="1091.5" y="215.5" width="187" height="329" rx="34.5" fill="none" stroke="#6b7079" stroke-width="1.6" opacity="0.55"/>
+    <!-- pantalla -->
+    <rect x="1103" y="227" width="164" height="306" rx="26" fill="url(#screen)"/>
+    <!-- reflejo diagonal -->
+    <path d="M1103 250 L1267 227 L1267 296 L1103 386 Z" fill="url(#glare)"/>
+    <!-- highlight borde izquierdo -->
+    <rect x="1095" y="252" width="3" height="244" rx="1.5" fill="#ffffff" opacity="0.14"/>
+    <!-- notch -->
+    <rect x="1160" y="240" width="50" height="11" rx="5.5" fill="#0a0c10"/>
+    <circle cx="1225" cy="245" r="4.5" fill="#0a0c10"/>
+    <!-- UI -->
+    <rect x="1126" y="280" width="92" height="15" rx="7.5" fill="url(#redbar)"/>
+    <rect x="1126" y="310" width="116" height="9" rx="4.5" fill="#5b626e"/>
+    <rect x="1126" y="328" width="98" height="9" rx="4.5" fill="#444b56"/>
+    <!-- botón central + -->
+    <circle cx="1185" cy="432" r="41" fill="#161b22"/>
+    <circle cx="1185" cy="432" r="33" fill="url(#redbtn)"/>
+    <path d="M1185 416v32 M1169 432h32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <!-- brillo superior -->
+    <ellipse cx="1150" cy="250" rx="40" ry="13" fill="#ffffff" opacity="0.05"/>
   </g>
 
   <!-- ===== Destornillador 3D ===== -->
