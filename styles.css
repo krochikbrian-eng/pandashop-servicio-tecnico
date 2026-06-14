@@ -138,17 +138,7 @@ img{max-width:100%;display:block}
 .hero-trust div{display:flex;flex-direction:column}
 .hero-trust strong{color:var(--red);font-size:17px}
 .hero-trust span{color:var(--muted);font-size:13px}
-.hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 18px 40px rgba(17,17,17,.08);width:92%;max-width:470px;margin:0 auto;position:relative}
-/* Animación celular reparándose */
-.hero-anim{position:absolute;left:-34px;bottom:-30px;width:104px;height:104px;filter:drop-shadow(0 12px 26px rgba(17,17,17,.18));animation:ha-float 4s ease-in-out infinite;z-index:2}
-.hero-anim svg{width:100%;height:100%;display:block}
-.ha-tool{transform-box:fill-box;transform-origin:26px 82px;animation:ha-tap 1.7s ease-in-out infinite}
-.ha-spark{opacity:0;transform-box:fill-box;transform-origin:center;animation:ha-spark 1.7s ease-in-out infinite}
-@keyframes ha-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes ha-tap{0%,100%{transform:rotate(0)}45%{transform:rotate(-15deg)}60%{transform:rotate(-15deg)}}
-@keyframes ha-spark{0%,42%{opacity:0;transform:scale(.6)}55%{opacity:1;transform:scale(1)}78%{opacity:0;transform:scale(.7)}}
-@media(prefers-reduced-motion:reduce){.hero-anim,.ha-tool,.ha-spark{animation:none}}
-@media(max-width:880px){.hero-anim{display:none}}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 18px 40px rgba(17,17,17,.08);width:92%;max-width:470px;margin:0 auto}
 .hero-card-head{font-weight:800;font-size:18px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;text-align:center}
 .hero-card ul{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
 .hero-card li{font-size:15px;color:var(--text);padding-bottom:12px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:flex-start;gap:11px;width:fit-content;margin:0 auto;min-width:240px}
