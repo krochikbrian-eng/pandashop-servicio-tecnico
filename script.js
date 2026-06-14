@@ -320,13 +320,20 @@ if (yEl) yEl.textContent = new Date().getFullYear();
     { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
   );
   map.forEach((_, sec) => io.observe(sec));
+
+  // En el tope de la página (hero) no debe quedar ninguna sección marcada
+  const clearAtTop = () => {
+    if (window.scrollY < 220) links.forEach((l) => l.classList.remove("active"));
+  };
+  window.addEventListener("scroll", clearAtTop, { passive: true });
+  clearAtTop();
 })();
 
 // ====== Animación de aparición al hacer scroll ======
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const targets = document.querySelectorAll(
-    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head, .review, .tip, .fix, .ff"
+    ".card, .why-item, .step, .cat-card, .spec-item, .spec-media, .stat, .seo-block, .section-head, .review, .tip, .fix, .ff, .part-card, .quoter, .ba-wrap"
   );
   if (reduce || !("IntersectionObserver" in window)) {
     targets.forEach((el) => el.classList.add("reveal-in"));
@@ -360,5 +367,67 @@ if (yEl) yEl.textContent = new Date().getFullYear();
       window.scrollTo({ top: 0, behavior: "smooth" });
       if (history.replaceState) history.replaceState(null, "", location.pathname);
     });
+  });
+})();
+
+/* ===== Cotizador rápido: arma el mensaje de WhatsApp ===== */
+(function () {
+  const q = document.getElementById("quoter");
+  if (!q) return;
+  const cta = q.querySelector("#quoterCta");
+  const sumEq = q.querySelector("[data-sum-eq]");
+  const sumFa = q.querySelector("[data-sum-fa]");
+  const base = "https://wa.me/5491133805700?text=";
+  let eq = "", fa = "";
+  function update() {
+    sumEq.textContent = eq || "—";
+    sumFa.textContent = fa || "—";
+    if (eq && fa) {
+      cta.classList.remove("is-off");
+      const msg = "¡Hola Pandashop! Quiero cotizar la reparación de mi " + eq + ". Falla: " + fa + ".";
+      cta.href = base + encodeURIComponent(msg);
+    } else {
+      cta.classList.add("is-off");
+      cta.href = base + encodeURIComponent("¡Hola Pandashop! Quiero cotizar una reparación.");
+    }
+  }
+  function bind(attr, set) {
+    q.querySelectorAll("[" + attr + "]").forEach((c) => {
+      c.addEventListener("click", () => {
+        q.querySelectorAll("[" + attr + "]").forEach((x) => x.classList.remove("sel"));
+        c.classList.add("sel");
+        set(c.getAttribute(attr));
+        update();
+      });
+    });
+  }
+  bind("data-eq", (v) => (eq = v));
+  bind("data-fa", (v) => (fa = v));
+  update();
+})();
+
+/* ===== Slider Antes / Después ===== */
+(function () {
+  document.querySelectorAll(".ba").forEach((ba) => {
+    const after = ba.querySelector(".ba-after");
+    const handle = ba.querySelector(".ba-handle");
+    const knob = ba.querySelector(".ba-knob");
+    if (!after) return;
+    let dragging = false;
+    function setp(p) {
+      p = Math.max(2, Math.min(98, p));
+      after.style.clipPath = "inset(0 0 0 " + p + "%)";
+      handle.style.left = p + "%";
+      knob.style.left = p + "%";
+    }
+    function fromEvent(e) {
+      const r = ba.getBoundingClientRect();
+      const x = (e.clientX != null ? e.clientX : (e.touches && e.touches[0].clientX)) - r.left;
+      setp((x / r.width) * 100);
+    }
+    ba.addEventListener("pointerdown", (e) => { dragging = true; fromEvent(e); });
+    window.addEventListener("pointermove", (e) => { if (dragging) fromEvent(e); });
+    window.addEventListener("pointerup", () => (dragging = false));
+    setp(50);
   });
 })();

@@ -398,3 +398,50 @@ img{max-width:100%;display:block}
 .wa-float:hover{transform:scale(1.08);animation:none}
 @keyframes wa-pulse{0%{box-shadow:0 8px 24px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 8px 24px rgba(37,211,102,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 8px 24px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
 @media(prefers-reduced-motion:reduce){.wa-float{animation:none}}
+
+/* ===================== Vitrina de repuestos ===================== */
+.parts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.part-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 20px;text-align:center;transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden}
+.part-card::after{content:"";position:absolute;inset:0;background:radial-gradient(120px 120px at 50% -10%,rgba(228,20,27,.07),transparent 70%);opacity:0;transition:opacity .25s}
+.part-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(17,17,17,.1);border-color:rgba(228,20,27,.3)}
+.part-card:hover::after{opacity:1}
+.part-card:hover .part-ico{transform:scale(1.07) rotate(-3deg)}
+.part-ico{width:72px;height:72px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;border-radius:18px;background:linear-gradient(135deg,#fff1f1,#ffe1e3);color:var(--red);transition:transform .25s}
+.part-ico svg{width:42px;height:42px}
+.part-card h3{font-size:17px;margin-bottom:7px}
+.part-card p{font-size:13.5px;color:var(--muted);line-height:1.55}
+.part-tag{display:inline-block;margin-top:13px;font-size:12px;font-weight:700;color:var(--red);background:rgba(228,20,27,.08);padding:5px 13px;border-radius:999px;position:relative;z-index:1}
+@media(max-width:880px){.parts-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+@media(max-width:520px){.parts-grid{grid-template-columns:1fr}}
+
+/* ===================== Cotizador rápido ===================== */
+.quoter{max-width:780px;margin:32px auto 0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 18px 42px rgba(17,17,17,.07)}
+.quoter-step{margin-bottom:24px}
+.qs-label{display:flex;align-items:center;gap:11px;font-weight:800;font-size:15.5px;margin-bottom:15px}
+.qs-num{width:27px;height:27px;border-radius:50%;background:var(--red);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1.5px solid var(--line);background:#fff;color:var(--text);font-family:inherit;font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px;cursor:pointer;transition:transform .12s,background .15s,border-color .15s,color .15s;display:inline-flex;align-items:center;gap:7px}
+.chip:hover{border-color:var(--red);color:var(--red);transform:translateY(-1px)}
+.chip.sel{background:var(--red);border-color:var(--red);color:#fff}
+.chip .chip-em{font-size:15px}
+.quoter-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+.quoter-summary{font-size:14px;color:var(--muted);line-height:1.5}
+.quoter-summary b{color:var(--text)}
+.quoter-cta{background:var(--wa);color:#fff;display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:12px;font-weight:700;font-size:15px;transition:transform .15s,opacity .2s;box-shadow:0 8px 20px rgba(37,211,102,.3)}
+.quoter-cta svg{width:20px;height:20px}
+.quoter-cta:hover{transform:translateY(-2px)}
+.quoter-cta.is-off{opacity:.45;pointer-events:none}
+@media(max-width:560px){.quoter{padding:22px}.quoter-foot{flex-direction:column;align-items:stretch;text-align:center}.quoter-cta{justify-content:center}}
+
+/* ===================== Antes / Después ===================== */
+.ba-wrap{max-width:540px;margin:30px auto 0}
+.ba{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 18px 40px rgba(17,17,17,.13);aspect-ratio:16/10;background:#fff;touch-action:none;user-select:none;cursor:ew-resize}
+.ba svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ba-after{will-change:clip-path}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(0,0,0,.06);pointer-events:none;z-index:3}
+.ba-knob{position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 5px 14px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;color:var(--red);pointer-events:none;z-index:4}
+.ba-knob svg{position:static;width:22px;height:22px;inset:auto}
+.ba-tag{position:absolute;top:13px;font-size:11.5px;font-weight:700;color:#fff;padding:4px 12px;border-radius:999px;z-index:3}
+.ba-tag.l{left:13px;background:rgba(17,17,17,.6)}
+.ba-tag.r{right:13px;background:rgba(228,20,27,.9)}
+.ba-hint{text-align:center;font-size:13px;color:var(--muted);margin-top:12px}
