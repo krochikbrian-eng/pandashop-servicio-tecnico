@@ -95,7 +95,7 @@ img{max-width:100%;display:block}
 .btn-block{width:100%}
 
 /* Hero */
-.hero{padding:72px 0 64px;background:#fff url("/assets/hero-bg.svg") center right / cover no-repeat;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero{padding:72px 0 64px;background:#fff url("/assets/hero-bg.svg") right 90px center / auto 122% no-repeat;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);z-index:0;pointer-events:none}
 .hero::before{width:440px;height:440px;background:radial-gradient(circle,rgba(228,20,27,.20),transparent 70%);top:-140px;left:-90px}
 .hero::after{width:380px;height:380px;background:radial-gradient(circle,rgba(255,90,96,.16),transparent 70%);bottom:-150px;right:-70px}
