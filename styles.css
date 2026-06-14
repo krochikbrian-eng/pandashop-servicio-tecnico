@@ -247,9 +247,10 @@ img{max-width:100%;display:block}
 @media(max-width:720px){.cat-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:460px){.cat-grid{grid-template-columns:1fr}}
 
-/* Proceso (Cómo trabajamos) */
-.proceso-media{display:flex;justify-content:center;margin:0 auto 40px}
-.proceso-media img{width:100%;max-width:210px;filter:drop-shadow(0 16px 30px rgba(192,16,22,.16))}
+/* Ilustración en Pedí tu presupuesto */
+.form-illu{display:flex;justify-content:center;margin-top:30px}
+.form-illu img{width:100%;max-width:250px;filter:drop-shadow(0 16px 30px rgba(192,16,22,.16))}
+@media(max-width:880px){.form-illu{margin-top:22px}.form-illu img{max-width:200px}}
 
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
