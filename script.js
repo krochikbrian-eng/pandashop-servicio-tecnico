@@ -351,3 +351,14 @@ if (yEl) yEl.textContent = new Date().getFullYear();
     targets.forEach((el, i) => { if (!el.classList.contains("reveal-in")) reveal(el, i); });
   }, 2500);
 })();
+
+/* Logo -> volver arriba del todo (el header es sticky, por eso #top no sube bien) */
+(function () {
+  document.querySelectorAll('a.brand[href="#top"], a.brand[href="#"]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (history.replaceState) history.replaceState(null, "", location.pathname);
+    });
+  });
+})();
