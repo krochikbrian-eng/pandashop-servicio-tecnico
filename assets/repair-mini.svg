@@ -1,0 +1,79 @@
+<svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparación de celular">
+  <defs>
+    <radialGradient id="rhalo" cx="50%" cy="48%" r="55%"><stop offset="0%" stop-color="#ffd9db" stop-opacity="0.8"/><stop offset="60%" stop-color="#ffe9ea" stop-opacity="0.3"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="rframe" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#41464f"/><stop offset="48%" stop-color="#16191e"/><stop offset="100%" stop-color="#0b0d11"/></linearGradient>
+    <linearGradient id="rscreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2b303b"/><stop offset="60%" stop-color="#1a1e26"/><stop offset="100%" stop-color="#0f1217"/></linearGradient>
+    <linearGradient id="rglare" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff" stop-opacity="0.2"/><stop offset="45%" stop-color="#fff" stop-opacity="0.03"/><stop offset="60%" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="rredbar" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff5a5f"/><stop offset="100%" stop-color="#d3101a"/></linearGradient>
+    <radialGradient id="rredbtn" cx="38%" cy="32%" r="75%"><stop offset="0%" stop-color="#ff6a6f"/><stop offset="60%" stop-color="#e4141b"/><stop offset="100%" stop-color="#b00b12"/></radialGradient>
+    <linearGradient id="rshaft" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#9aa0a9"/><stop offset="40%" stop-color="#eef1f5"/><stop offset="60%" stop-color="#c3c8d0"/><stop offset="100%" stop-color="#7c828c"/></linearGradient>
+    <linearGradient id="rhandle" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff5a5f"/><stop offset="45%" stop-color="#e4141b"/><stop offset="100%" stop-color="#a90a11"/></linearGradient>
+    <radialGradient id="rlens" cx="40%" cy="35%" r="70%"><stop offset="0%" stop-color="#3a4150"/><stop offset="70%" stop-color="#11141a"/><stop offset="100%" stop-color="#05070a"/></radialGradient>
+    <linearGradient id="rbadge" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#eef0f4"/></linearGradient>
+    <filter id="rph" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#5e1418" flood-opacity="0.3"/></filter>
+    <filter id="rso" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#7a1f24" flood-opacity="0.2"/></filter>
+    <filter id="rbl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <clipPath id="rScr"><rect x="120" y="62" width="68" height="120" rx="13"/></clipPath>
+    <style>
+      .rfa{animation:rfa 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .rscrew{animation:rwg 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 14%}
+      .rcam{animation:rcam 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .rpulse{animation:rpl 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .rscan{animation:rsc 2.8s ease-in-out infinite}
+      @keyframes rfa{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @keyframes rwg{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(4deg)}}
+      @keyframes rcam{0%,100%{transform:translateY(-3px)}50%{transform:translateY(5px)}}
+      @keyframes rpl{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.12);opacity:.92}}
+      @keyframes rsc{0%{transform:translateY(0);opacity:0}15%{opacity:.5}50%{transform:translateY(95px);opacity:.5}65%{opacity:0}100%{opacity:0}}
+      @media(prefers-reduced-motion:reduce){.rfa,.rscrew,.rcam,.rpulse,.rscan{animation:none}}
+    </style>
+  </defs>
+
+  <circle cx="150" cy="120" r="116" fill="url(#rhalo)"/>
+
+  <!-- destornillador -->
+  <g class="rscrew" transform="rotate(-38 78 150)">
+    <rect x="74.5" y="100" width="5" height="20" rx="1.6" fill="#6b7178"/>
+    <rect x="72" y="118" width="10" height="32" rx="2.4" fill="url(#rshaft)"/>
+    <rect x="70" y="148" width="14" height="8" rx="2.4" fill="#2b2f36"/>
+    <rect x="69" y="154" width="16" height="64" rx="8" fill="url(#rhandle)"/>
+    <rect x="72" y="159" width="3.5" height="54" rx="1.8" fill="#fff" opacity="0.32"/>
+  </g>
+
+  <!-- celular -->
+  <g class="rfa">
+    <ellipse cx="150" cy="206" rx="60" ry="14" fill="#7a1f24" opacity="0.18" filter="url(#rbl)"/>
+    <g transform="rotate(-8 150 120)" filter="url(#rph)">
+      <rect x="110" y="50" width="90" height="148" rx="20" fill="url(#rframe)"/>
+      <rect x="111.3" y="51.3" width="87.4" height="145.4" rx="18.8" fill="none" stroke="#6b7079" stroke-width="1.3" opacity="0.5"/>
+      <rect x="120" y="62" width="68" height="120" rx="13" fill="url(#rscreen)"/>
+      <g clip-path="url(#rScr)"><rect class="rscan" x="120" y="62" width="68" height="20" fill="#ff5a5f" opacity="0"/></g>
+      <path d="M120 76 L188 62 L188 96 L120 128 Z" fill="url(#rglare)"/>
+      <rect x="146" y="56" width="22" height="5" rx="2.5" fill="#0a0c10"/>
+      <rect x="132" y="80" width="44" height="8" rx="4" fill="url(#rredbar)"/>
+      <rect x="132" y="95" width="52" height="5" rx="2.5" fill="#535a66"/>
+      <rect x="132" y="105" width="40" height="5" rx="2.5" fill="#3f4651"/>
+      <!-- flex en la base -->
+      <path d="M150 182c-5 7 4 10 0 18" fill="none" stroke="#e0a52a" stroke-width="5" stroke-linecap="round"/>
+      <g class="rpulse">
+        <circle cx="154" cy="150" r="20" fill="#161b22"/>
+        <circle cx="154" cy="150" r="15" fill="url(#rredbtn)"/>
+        <path d="M154 142v16 M146 150h16" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- badge cámara -->
+  <g class="rcam" transform="translate(226 92)">
+    <rect x="-22" y="-22" width="44" height="44" rx="13" fill="url(#rbadge)" filter="url(#rso)"/>
+    <circle cx="0" cy="0" r="11" fill="url(#rlens)"/>
+    <circle cx="0" cy="0" r="5" fill="#0a2a44"/>
+    <circle cx="-3" cy="-3" r="2" fill="#7fc7ff" opacity="0.8"/>
+    <circle cx="10" cy="-11" r="2" fill="#e4141b"/>
+  </g>
+
+  <!-- chips +/- -->
+  <g class="rcam" transform="translate(70 92)"><circle r="11" fill="url(#rbadge)" filter="url(#rso)"/><rect x="-5" y="-1.4" width="10" height="2.8" rx="1.4" fill="#7c828c"/></g>
+  <circle cx="230" cy="178" r="11" fill="url(#rbadge)" filter="url(#rso)"/>
+  <path d="M230 173v.2 M230 177v6" stroke="#7c828c" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
