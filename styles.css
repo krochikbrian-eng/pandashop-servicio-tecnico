@@ -27,7 +27,7 @@ img{max-width:100%;display:block}
 .scroll-prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--red),#ff6a4d);z-index:100;transition:width .1s linear}
 
 /* Topbar */
-.topbar{background:linear-gradient(135deg,#272c3a,#1d2029);font-size:13px;color:#cfd3da}
+.topbar{background:linear-gradient(135deg,#232834,#1a1d25);font-size:13px;color:#cfd3da}
 .topbar-inner{display:flex;align-items:center;gap:6px 20px;min-height:40px;flex-wrap:wrap;justify-content:space-between;padding:6px 0}
 .tb-left,.tb-right{display:flex;align-items:center;gap:7px 16px;flex-wrap:wrap}
 .topbar .sep{opacity:.35}
@@ -166,7 +166,7 @@ img{max-width:100%;display:block}
 @media(prefers-reduced-motion:reduce){.brands-track{animation:none;flex-wrap:wrap;justify-content:center}}
 
 /* Stats band */
-.stats{background:linear-gradient(135deg,#272c3a,#1d2029);color:#fff}
+.stats{background:linear-gradient(135deg,#232834,#1a1d25);color:#fff}
 .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:34px 22px}
 .stat{text-align:center;border-right:1px solid rgba(255,255,255,.12)}
 .stat:last-child{border-right:0}
@@ -341,7 +341,7 @@ img{max-width:100%;display:block}
 .cta-final p{margin:10px 0 22px;font-size:17px;opacity:.9}
 
 /* Footer */
-.footer{background:linear-gradient(135deg,#272c3a,#1d2029);color:#cfd3da;padding:50px 0 0}
+.footer{background:linear-gradient(135deg,#232834,#1a1d25);color:#cfd3da;padding:50px 0 0}
 .footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:30px}
 .footer-logo{height:54px;width:auto;background:#fff;border-radius:10px;padding:8px 14px;margin-bottom:14px}
 .footer p{color:#9aa0ab;font-size:14px;max-width:240px}
