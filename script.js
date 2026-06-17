@@ -81,7 +81,7 @@ if (cards) {
       <p>${s.desc}</p>
       <ul>${s.tags.map((t) => `<li>${t}</li>`).join("")}</ul>
       <a class="card-link" target="_blank" rel="noopener"
-         href="${waLink(`¡Hola Pandashop! Quiero consultar por servicio técnico de ${s.title}.`)}">
+         href="${waLink(`¡Hola Pandashop! Quiero consultar por la reparación de ${s.title}.`)}">
          Pedir presupuesto →
       </a>
     </div>`
@@ -230,7 +230,7 @@ if (form) {
     const nombre = document.getElementById("f-nombre").value;
     const tel = document.getElementById("f-tel").value;
     const msg =
-      `¡Hola Pandashop! Quiero pedir un presupuesto de servicio técnico.\n\n` +
+      `¡Hola Pandashop! Quiero pedir un presupuesto de reparación.\n\n` +
       `• Equipo: ${tipo}\n` +
       `• Marca y modelo: ${modelo}\n` +
       `• Falla: ${falla}\n` +

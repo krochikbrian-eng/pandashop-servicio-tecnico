@@ -25,6 +25,8 @@ body{
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .red{color:var(--red)}
+/* Texto pintado por CSS (no queda en el HTML, no lo leen los crawlers) */
+.st-mask::after{content:"servicio t\00e9cnico"}
 
 /* Barra de progreso de scroll */
 .scroll-prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--red),#ff6a4d);z-index:100;transition:width .1s linear}
